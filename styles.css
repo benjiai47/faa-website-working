@@ -1058,11 +1058,18 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 /* Foundations field series */
-.foundations-article-hero {
-  background: var(--faa-navy);
-  color: var(--faa-white);
-  padding: 88px 0 76px;
+/* Article-intro: white-themed text section that sits between the
+   full-bleed image (at the top) and the article body — same light
+   theme as the hub intro. */
+.foundations-article-intro {
+  background: var(--faa-white);
+  color: var(--faa-gray-600);
+  padding: 64px 0 32px;
 }
+.foundations-article-intro .read-link            { color: var(--faa-blue); }
+.foundations-article-intro .foundations-meta span{ color: var(--faa-gray-400); border-color: var(--faa-gray-200); }
+.foundations-article-intro .foundations-h1       { color: var(--faa-navy); }
+.foundations-article-intro .foundations-article-subhead { color: var(--faa-gray-600); }
 
 /* ─── Foundations Series Hub — image-led, light theme ─────────────── */
 /* Section 1: full-bleed architecture image, edge-to-edge of the viewport,

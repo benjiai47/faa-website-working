@@ -294,7 +294,10 @@
   function renderArticle(article) {
     document.title = article.title + " — Foundation AI Advisory";
     root.innerHTML = `
-      <section class="foundations-article-hero">
+      <section class="foundations-hub-image-section" aria-label="Foundations Series — Five Operating Layers">
+        <img class="foundations-hub-image" src="assets/insights/foundations-series-architecture-hero.png" alt="Five layered operating planes — data, process, architecture, ROI sequencing, and governance — stacked as a single architecture for applied AI" />
+      </section>
+      <section class="foundations-article-intro">
         <div class="container-faa">
           <a href="insights-foundations-applied-ai-series.html" class="read-link">Back to Series</a>
           <div class="foundations-meta">
@@ -308,9 +311,6 @@
       </section>
       <section class="bg-white">
         <div class="container-faa foundations-article-layout">
-          <figure class="foundations-hero-image">
-            <img src="${esc(article.image)}" alt="${esc(article.title)}" onerror="this.closest('figure').classList.add('is-missing'); this.remove();" />
-          </figure>
           <article class="foundations-body">
             ${article.body.slice(0, 5).map((item) => `<p>${esc(item)}</p>`).join("")}
             <blockquote>${esc(article.pull)}</blockquote>
