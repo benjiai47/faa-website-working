@@ -12,7 +12,7 @@ deck: "Mid-market companies should not let a platform decision become an operati
 excerpt: "Mid-market companies should not let a platform decision become an operating strategy."
 ctaLabel: "Start with a Business Systems Assessment"
 ctaHref: "mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry"
-image: "/assets/insights/mid-market-case-for-platform-agnostic-card.png"
+image: "../assets/insights/mid-market-case-for-platform-agnostic-card.png"
 ---
 
 The AI market is pushing executives toward platform decisions before business decisions are ready.

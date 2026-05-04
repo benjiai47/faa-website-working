@@ -5,7 +5,7 @@ category: "Data Curation & Governance"
 topic: "Data"
 format: "Field Note"
 excerpt: "Item masters, customer masters, vendor masters. If they are broken, every downstream agent inherits the noise."
-image: "/assets/insights/insight-master-data-quality.png"
+image: "../assets/insights/insight-master-data-quality.png"
 ---
 
 Item masters. Customer records. Vendor data.

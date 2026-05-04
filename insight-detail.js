@@ -116,7 +116,7 @@
       return;
     }
 
-    const response = await fetch('/content/insights/' + slug + '.md');
+    const response = await fetch('../content/insights/' + slug + '.md');
     if (!response.ok) {
       if (body) body.innerHTML = '<p>Insight not found.</p>';
       return;

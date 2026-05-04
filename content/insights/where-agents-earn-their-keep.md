@@ -12,7 +12,7 @@ deck: "The executive question is not where agents can be used. It is where agent
 excerpt: "The executive question is not where agents can be used. It is where agents can improve the operating system without increasing risk."
 ctaLabel: "Start with a Business Systems Assessment"
 ctaHref: "mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry"
-image: "/assets/insights/where-agents-earn-their-keep-card.png"
+image: "../assets/insights/where-agents-earn-their-keep-card.png"
 ---
 
 AI agents are becoming the default answer to a question most companies have not defined well enough.
