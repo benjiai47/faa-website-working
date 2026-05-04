@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Workflow Optimization &mdash; Foundation AI Advisory</title>
+<meta name="description" content="Workflow Optimization for operators: align hand-offs, exceptions, and decision rights before automation. Workflow first, then AI." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://foundationaiadvisory.com/operations.html" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Workflow Optimization &mdash; Foundation AI Advisory" />
+<meta property="og:description" content="Workflow Optimization for operators: align hand-offs, exceptions, and decision rights before automation. Workflow first, then AI." />
+<meta property="og:url" content="https://foundationaiadvisory.com/operations.html" />
+<meta property="og:image" content="https://foundationaiadvisory.com/assets/workflow-optimization-hero-highway-flow.png" />
+<meta property="og:site_name" content="Foundation AI Advisory" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Foundation AI Advisory","legalName":"Foundation AI Advisory, LLC","url":"https://foundationaiadvisory.com/","logo":"https://foundationaiadvisory.com/assets/global-header-logo-wordmark.png","description":"A business-first AI advisory firm for mid-market operators. FAA fixes the data, workflow, and system foundation before applying AI.","founder":{"@type":"Person","name":"Ben DeMichael"},"foundingLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressRegion":"OH","addressCountry":"US"}},"knowsAbout":["Data Curation and Governance","Workflow Optimization","AI Design and Implementation","Mid-Market AI Strategy","Applied AI for Industrial Operations"],"sameAs":["https://www.linkedin.com/company/foundation-ai-advisory"],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"privacy@foundationaiadvisory.com","url":"https://foundationaiadvisory.com/contact.html","availableLanguage":["English"]}}</script>
+<link rel="stylesheet" href="tailwind-static.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-white">
+
+<header class="sticky top-0 z-40 bg-white border-b" style="border-color: var(--faa-gray-100);" id="site-header">
+  <div class="container-faa flex items-center justify-between relative" style="height:96px;">
+    <a href="index.html" class="flex items-center shrink-0" aria-label="Foundation AI Advisory home">
+      <img src="assets/global-header-logo-wordmark.png" alt="Foundation AI Advisory" style="height:48px;width:auto;max-width:none;display:block;" />
+    </a>
+
+    <nav class="hidden xl:flex items-center gap-6 h-full mx-6" aria-label="Primary">
+      <a href="foundation.html" class="utilnav-link" style="height:96px;">Data Curation &amp; Governance</a>
+      <a href="operations.html" class="utilnav-link" style="height:96px;" aria-current="page">Workflow Optimization</a>
+      <a href="agentic-ai.html" class="utilnav-link" style="height:96px;">AI Design &amp; Implementation</a>
+      <button type="button" class="utilnav-link" data-mega="industries" aria-expanded="false" aria-controls="mega-industries" aria-haspopup="true">
+        By Industry
+        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+      </button>
+      <button type="button" class="utilnav-link" data-mega="insights" aria-expanded="false" aria-controls="mega-insights" aria-haspopup="true">
+        Insights
+        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+      </button>
+      <a href="about.html" class="utilnav-link" style="height:96px;">About</a>
+      
+    </nav>
+
+    <div class="flex items-center shrink-0">
+      <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary hidden sm:inline-flex">Start with a Business Systems Assessment</a>
+    </div>
+  </div>
+
+  <div id="mega-industries" class="mega-menu" role="region" aria-label="Industries">
+    <div class="mega-menu-inner">
+      <h4>Industries</h4>
+      <div class="mega-grid">
+        <a href="industry-manufacturing-industrial-production.html" class="mega-link">Manufacturing &amp; Industrial Production<span class="mega-link-dek">Throughput, yield, plant floor</span></a>
+        <a href="industry-engineering-construction-infrastructure.html" class="mega-link">Engineering, Construction &amp; Infrastructure (ECI)<span class="mega-link-dek">Field-to-office, project controls</span></a>
+        <a href="industry-transportation-logistics.html" class="mega-link">Transportation &amp; Logistics<span class="mega-link-dek">Forecasting, dispatch, freight</span></a>
+        <a href="industry-energy-natural-resources.html" class="mega-link">Energy &amp; Natural Resources<span class="mega-link-dek">Asset reliability, regulatory trails</span></a>
+        <a href="industry-distribution-wholesale.html" class="mega-link">Distribution &amp; Wholesale<span class="mega-link-dek">Inventory, demand, exception flow</span></a>
+        <a href="industry-industrial-equipment.html" class="mega-link">Industrial Equipment<span class="mega-link-dek">Aftermarket, parts, service</span></a>
+        <a href="industry-specialty-manufacturing.html" class="mega-link">Specialty Manufacturing<span class="mega-link-dek">High-mix, low-volume reality</span></a>
+        <a href="industry-professional-technical-services.html" class="mega-link">Professional &amp; Technical Services<span class="mega-link-dek">Knowledge work, delivery systems</span></a>
+        <a href="industry-financial-services-banking.html" class="mega-link">Financial Services &amp; Banking<span class="mega-link-dek">Controls, reporting, risk</span></a>
+        <a href="industry-ai-data-it-systems.html" class="mega-link">AI, Data &amp; IT Systems<span class="mega-link-dek">System owners, data teams</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="mega-insights" class="mega-menu" role="region" aria-label="Insights">
+    <div class="mega-menu-inner">
+      <div class="mega-grid-3">
+        <div>
+          <h4 class="mega-group-heading">By Pillar</h4>
+          <a href="foundation.html" class="mega-link">Data Curation &amp; Governance<span class="mega-link-dek">Data before anything else</span></a>
+          <a href="operations.html" class="mega-link">Workflow Optimization<span class="mega-link-dek">Fix process, then apply AI</span></a>
+          <a href="agentic-ai.html" class="mega-link">AI Design &amp; Implementation<span class="mega-link-dek">Designed around measurable outcomes</span></a>
+        </div>
+        <div>
+          <h4 class="mega-group-heading">By Format</h4>
+          <a href="insights.html?format=article" class="mega-link">Articles<span class="mega-link-dek">Long-form analysis</span></a>
+          <a href="insights.html?format=brief" class="mega-link">Briefs<span class="mega-link-dek">Short-form analyses</span></a>
+          <a href="insights.html?format=field-note" class="mega-link">Field Notes<span class="mega-link-dek">From the engagement floor</span></a>
+          <a href="insights.html?format=infographic" class="mega-link">Infographics<span class="mega-link-dek">Visual operating explainers</span></a>
+          <a href="insights.html?format=podcast" class="mega-link">Podcast<span class="mega-link-dek">Operator conversations</span></a>
+          <a href="insights.html?format=video" class="mega-link">Video<span class="mega-link-dek">Working sessions</span></a>
+        </div>
+        <div>
+          <h4 class="mega-group-heading">Featured</h4>
+          <a href="insights.html#foundations-series" class="mega-link">Foundations Series<span class="mega-link-dek">Five-part field series</span></a>
+          <a href="insights.html" class="mega-link">All Insights<span class="mega-link-dek">The full hub</span></a>
+          <a href="insights.html#subscribe" class="mega-link">Subscribe<span class="mega-link-dek">Get the running record</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="page-hero-image" style="background-image: url('assets/workflow-optimization-hero-highway-flow.png'); background-position: center center;" aria-hidden="true"></div>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="container-faa page-hero-content">
+    <div class="hero-text-block">
+      <div class="eyebrow" style="color: rgba(255,255,255,0.85);">Methodology &middot; 02</div>
+      <h1 class="hero-headline mt-5">Workflow Optimization: Fix the Process Before AI</h1>
+      <p class="hero-dek">Align how work actually moves across the business before applying automation or AI. FAA identifies broken handoffs, undocumented exceptions, unclear ownership, and decision friction that slow throughput, leak margin, and increase operating risk.</p>
+      <div class="mt-8">
+        <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary">Start with a Business Systems Assessment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 1. THE PROBLEM                                                -->
+<!-- ============================================================= -->
+<section class="bg-white">
+  <div class="container-faa section-y">
+    <div class="max-w-3xl mb-12 lg:mb-16">
+      <div class="eyebrow" style="color: var(--faa-navy);">WHAT WE SEE IN THE FIELD</div>
+      <h2 class="h2 mt-3">Most Processes Aren&rsquo;t Designed. They&rsquo;re Inherited.</h2>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        Operators rarely set out to build inefficient workflows. They inherit them through growth, turnover, customer exceptions, system changes, acquisitions, and years of &ldquo;just get it done.&rdquo;
+      </p>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        Over time, the workaround becomes the process.
+      </p>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        The company may have documented procedures, but the real operating model often lives in inboxes, spreadsheets, side databases, tribal knowledge, and manual approvals. That creates a gap between how leadership believes the business runs and how work actually gets done.
+      </p>
+    </div>
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10" style="list-style:none;padding:0;margin:0;">
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Broken handoffs hide in plain sight.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Sales, operations, finance, service, and leadership may each believe the next team owns the next step. Work waits in inboxes, spreadsheets, status meetings, and undocumented follow-up calls. The result is cycle time that stretches without a clear owner.</p>
+      </li>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">The real workflow is not the documented workflow.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">SOPs describe how the business intends work to happen. The actual business runs on what employees do when systems are incomplete, customer requirements change, or the standard path does not fit the situation.</p>
+      </li>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Exceptions become normal operating procedure.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Rush jobs, customer-specific rules, pricing overrides, missing information, manual approvals, and special handling become embedded into the operating model. What should be controlled exceptions become part of daily throughput.</p>
+      </li>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Decisions wait for the one person who knows.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Approvals, escalations, and judgment calls often depend on tribal knowledge. When that person is busy, unavailable, or leaves the company, the workflow slows, breaks, or becomes inconsistent.</p>
+      </li>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Work moves through shadow systems.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Spreadsheets, side databases, email chains, sticky notes, personal checklists, and private trackers become the real control layer. Leadership loses visibility into status, risk, and accountability.</p>
+      </li>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">No one owns the full flow.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Each department optimizes its own piece. The customer, job, order, invoice, claim, or issue still has to move across the entire business. When nobody owns the end-to-end flow, the customer feels the friction and margin absorbs the cost.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 2. WHY THIS MATTERS                                           -->
+<!-- ============================================================= -->
+<section style="background: var(--faa-gray-50);">
+  <div class="container-faa section-y">
+    <div class="max-w-3xl mb-12 lg:mb-14">
+      <div class="eyebrow" style="color: var(--faa-navy);">WHY IT MATTERS</div>
+      <h2 class="h2 mt-3">This Is Where Margin Leaks Quietly.</h2>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        Workflow problems do not announce themselves as process problems.
+      </p>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        They appear as missed ship dates, delayed billing, rework, excess touches, duplicated entry, customer frustration, slow approvals, unclear priorities, overtime, and operating noise that leadership can feel but cannot easily trace.
+      </p>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        The cost is not only labor. It is lost throughput, slower cash conversion, weaker customer experience, higher risk, and management time spent chasing work that should already be moving.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div class="card p-6" style="border-color: var(--faa-gray-200);">
+        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Rework</div>
+        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.55;">Teams redo work because upstream information was incomplete, late, inaccurate, or entered differently than expected.</p>
+      </div>
+      <div class="card p-6" style="border-color: var(--faa-gray-200);">
+        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Slow Decisions</div>
+        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.55;">Approvals sit idle because ownership, authority, escalation rules, or required inputs are unclear.</p>
+      </div>
+      <div class="card p-6" style="border-color: var(--faa-gray-200);">
+        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Customer Friction</div>
+        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.55;">Customers experience delay and inconsistency even when individual teams are working hard.</p>
+      </div>
+      <div class="card p-6" style="border-color: var(--faa-gray-200);">
+        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Duplicated Effort</div>
+        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.55;">The same information is entered, checked, reformatted, and reconciled across multiple systems.</p>
+      </div>
+      <div class="card p-6" style="border-color: var(--faa-gray-200);">
+        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Failed AI</div>
+        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.55;">AI accelerates the workflow it is given. If the workflow is fragmented, unclear, or dependent on rescue work, AI will scale the friction instead of removing it.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 lg:mt-16 max-w-3xl border-l-2 pl-6" style="border-color: var(--faa-blue);">
+      <p style="color: var(--faa-navy); font-size:22px; font-weight:600; line-height:1.35; letter-spacing:-0.01em;">
+        Automating a Broken Process Just Breaks It Faster.
+      </p>
+      <p class="mt-3" style="color: var(--faa-gray-600); font-size:16px; line-height:1.6;">
+        AI does not remove friction by default.
+      </p>
+      <p class="mt-3" style="color: var(--faa-gray-600); font-size:16px; line-height:1.6;">
+        It applies speed to the workflow underneath it. If that workflow depends on undocumented exceptions, unclear ownership, manual rescue work, inconsistent inputs, or shadow systems, AI will amplify the problem.
+      </p>
+      <p class="mt-3" style="color: var(--faa-gray-600); font-size:16px; line-height:1.6;">
+        The right sequence is not tool selection first.
+      </p>
+      <p class="mt-3" style="color: var(--faa-gray-600); font-size:16px; line-height:1.6;">
+        It is:
+      </p>
+      <ol class="mt-5 space-y-4" style="color: var(--faa-gray-600); font-size:16px; line-height:1.6; padding-left: 1.25rem;">
+        <li><strong style="color: var(--faa-navy);">Data Curation &amp; Governance</strong><br />Clarify the records, definitions, ownership, and controls that the workflow depends on.</li>
+        <li><strong style="color: var(--faa-navy);">Workflow Optimization</strong><br />Redesign how work moves, who owns each step, where decisions happen, and which exceptions must be controlled.</li>
+        <li><strong style="color: var(--faa-navy);">AI Design &amp; Implementation</strong><br />Apply AI only where the workflow is stable, measurable, and ready to scale.</li>
+      </ol>
+      <p class="mt-5" style="color: var(--faa-gray-600); font-size:16px; line-height:1.6;">
+        That sequence protects margin, improves throughput, reduces operating risk, and gives leadership visibility into what is actually happening.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 3. FAA APPROACH                                               -->
+<!-- ============================================================= -->
+<section id="approach" class="bg-white">
+  <div class="container-faa section-y">
+    <div class="max-w-3xl mb-12 lg:mb-16">
+      <div class="eyebrow" style="color: var(--faa-navy);">FAA&rsquo;S APPROACH</div>
+      <h2 class="h2 mt-3">What We Actually Do.</h2>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        FAA maps how work really moves through the business, not how it appears in a procedure document.
+      </p>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        We identify the handoffs, decisions, exceptions, inputs, approvals, and control points that determine speed, accuracy, accountability, and risk. The goal is not a cleaner process map. The goal is an operating flow that can be measured, managed, improved, and eventually automated where it makes business sense.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-12">
+      <div class="flex gap-5">
+        <div class="method-num shrink-0">01</div>
+        <div>
+          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Workflow Reality Mapping</h3>
+          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">We document how work actually moves across people, systems, departments, and exceptions.</p>
+          <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">This includes the official process, the informal workarounds, the manual checks, the decision points, and the places where employees compensate for system gaps.</p>
+          <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Business impact: improves visibility, exposes hidden cycle-time delays, and gives leadership a factual operating baseline.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5">
+        <div class="method-num shrink-0">02</div>
+        <div>
+          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Handoff &amp; Ownership Definition</h3>
+          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">We clarify who owns each step, who approves decisions, what information is required, and where work should move next.</p>
+          <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">The point is not documentation for documentation&rsquo;s sake. The point is accountability that survives turnover, volume spikes, customer exceptions, and system constraints.</p>
+          <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Business impact: reduces stalled work, duplicate follow-up, missed handoffs, and management escalation.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5">
+        <div class="method-num shrink-0">03</div>
+        <div>
+          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Exception Path Reduction</h3>
+          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">We identify recurring exceptions that have become embedded in the operating model.</p>
+          <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Then we determine which exceptions should be standardized, eliminated, escalated, or controlled before they continue consuming capacity.</p>
+          <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Business impact: protects margin, reduces rework, improves throughput, and limits the cost of custom handling.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5">
+        <div class="method-num shrink-0">04</div>
+        <div>
+          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Decision Flow Design</h3>
+          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">We define where decisions are made, what information is required, who has authority, and when escalation is needed.</p>
+          <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">A workflow is only as fast as its slowest unclear decision.</p>
+          <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Business impact: shortens cycle time, improves consistency, reduces operating risk, and prevents approvals from becoming bottlenecks.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5">
+        <div class="method-num shrink-0">05</div>
+        <div>
+          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Automation Readiness</h3>
+          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">We determine where AI or automation can safely accelerate the workflow after the process is stable enough to support it.</p>
+          <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">If the flow still depends on rescue work, undocumented judgment, inconsistent inputs, or unclear ownership, it is not ready to scale.</p>
+          <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Business impact: avoids failed AI spend, improves adoption, and focuses automation on measurable operational gains.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--faa-gray-50);">
+  <div class="container-faa section-y">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      <div class="lg:col-span-7">
+        <div class="eyebrow" style="color: var(--faa-navy);">THE OUTCOME</div>
+        <h2 class="h2 mt-3">A Workflow the Business Can Actually Run, Measure, and Improve.</h2>
+        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+          FAA does not optimize workflows to make diagrams cleaner.
+        </p>
+        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+          We optimize workflows so the business can move faster with less friction, less rework, fewer delays, stronger accountability, and better visibility.
+        </p>
+        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+          The result is a business that can measure how work moves, identify where value leaks, and apply AI only where the foundation is strong enough to support it.
+        </p>
+      </div>
+      <div class="lg:col-span-5 card p-8" style="border-color: var(--faa-gray-200);">
+        <div class="eyebrow" style="color: var(--faa-blue);">Expected Business Outcomes</div>
+        <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3" style="list-style:none;padding:0;margin-bottom:0;">
+          <li style="color: var(--faa-navy); font-size:15px; font-weight:600;">Higher throughput</li>
+          <li style="color: var(--faa-navy); font-size:15px; font-weight:600;">Shorter cycle times</li>
+          <li style="color: var(--faa-navy); font-size:15px; font-weight:600;">Lower rework</li>
+          <li style="color: var(--faa-navy); font-size:15px; font-weight:600;">Faster decisions</li>
+          <li style="color: var(--faa-navy); font-size:15px; font-weight:600;">Better cash conversion</li>
+          <li style="color: var(--faa-navy); font-size:15px; font-weight:600;">Reduced operating risk</li>
+          <li style="color: var(--faa-navy); font-size:15px; font-weight:600;">Clearer accountability</li>
+          <li style="color: var(--faa-navy); font-size:15px; font-weight:600;">Better customer experience</li>
+          <li style="color: var(--faa-navy); font-size:15px; font-weight:600;">Stronger readiness for AI implementation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--faa-navy);">
+  <div class="container-faa" style="padding-top:96px; padding-bottom:96px;">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 relative">
+      <div class="lg:pr-12">
+        <div class="eyebrow" style="color: rgba(255,255,255,0.7);">NEXT STEP</div>
+        <h3 class="mt-3" style="color: var(--faa-white); font-size: 28px; font-weight: 600; line-height: 1.2;">Before You Automate the Workflow, Understand It.</h3>
+        <p class="mt-5" style="color: rgba(255,255,255,0.85); font-size: 17px; line-height: 1.6; max-width: 50ch;">
+          Most AI failures start before the model is ever selected. They start in workflows that are undocumented, inconsistent, manually rescued, or dependent on tribal knowledge.
+        </p>
+        <p class="mt-5" style="color: rgba(255,255,255,0.85); font-size: 17px; line-height: 1.6; max-width: 50ch;">
+          FAA helps operators see how work really moves, fix the friction that slows the business down, and prepare the operating model for responsible AI implementation.
+        </p>
+        <div class="mt-8">
+          <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary">Start with a Business Systems Assessment</a>
+        </div>
+      </div>
+      <div class="hidden lg:block absolute left-1/2 top-0 bottom-0" style="width:1px;background: rgba(255,255,255,0.20);"></div>
+      <div class="lg:pl-12">
+        <div class="eyebrow" style="color: rgba(255,255,255,0.7);">Continue the Sequence</div>
+        <h3 class="mt-3" style="color: var(--faa-white); font-size: 28px; font-weight: 600; line-height: 1.2;">AI Design &amp; Implementation</h3>
+        <p class="mt-5" style="color: rgba(255,255,255,0.85); font-size: 17px; line-height: 1.6; max-width: 50ch;">
+          Once the workflow is visible, stable, and measurable, the next step is applying AI where it improves execution without scaling hidden friction.
+        </p>
+        <div class="mt-8">
+          <a href="agentic-ai.html" class="btn btn-outline-white">Explore AI Design &amp; Implementation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--faa-gray-50);">
+  <div class="container-faa" style="padding-top:64px; padding-bottom:64px;">
+    <div class="text-center mx-auto" style="max-width: 640px;">
+      <h3 style="color: var(--faa-navy); font-size: 24px; font-weight: 600; line-height: 1.3;">Get FAA's running record on agentic AI.</h3>
+      <p class="mt-3" style="color: var(--faa-gray-600); font-size: 16px; line-height: 1.6;">
+        Insight assets for mid-market operators. Published when there is something worth publishing.
+      </p>
+      <form class="mt-7 flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center" data-subscribe-form>
+        <label for="subscribe-email" class="sr-only">Email address</label>
+        <input id="subscribe-email" type="email" placeholder="you@company.com" required
+          class="bg-white"
+          style="height:44px; padding: 0 14px; border:1px solid var(--faa-gray-200); border-radius:4px; font-size:15px; color: var(--faa-gray-600); width:100%; max-width: 380px;" />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="mt-4" style="color: var(--faa-gray-400); font-size: 13px;">
+        We do not share your information. Unsubscribe any time.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer style="background: var(--faa-navy);">
+  <div class="container-faa" style="padding-top:48px; padding-bottom:48px;">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+      <div class="flex items-center gap-4" style="color: var(--faa-white);">
+        <img src="assets/global-footer-logo-wordmark.png" alt="Foundation AI Advisory" style="height:32px;width:auto;display:block;opacity:0.95;" />
+        <span style="color: rgba(255,255,255,0.6); font-size: 13px;">&copy; 2026 Foundation AI Advisory. All rights reserved.</span>
+      </div>
+      <nav aria-label="Legal" class="flex flex-wrap items-center gap-6">
+        <a href="privacy-policy.html" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Privacy</a>
+        <a href="terms.html" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Terms</a>
+        <a href="contact.html" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Contact</a>
+        <a href="https://www.linkedin.com/company/foundation-ai-advisory" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Foundation AI Advisory on LinkedIn" style="font-size: 13px;">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.94 8.98H3.72v10.54h3.22V8.98zM5.33 7.52c1.03 0 1.86-.84 1.86-1.86S6.36 3.8 5.33 3.8s-1.86.84-1.86 1.86.83 1.86 1.86 1.86zM20.53 13.56c0-3.03-1.62-4.44-3.78-4.44-1.74 0-2.52.96-2.95 1.63V8.98h-3.08c.04.99 0 10.54 0 10.54h3.21v-5.89c0-.31.02-.63.12-.85.26-.63.86-1.28 1.86-1.28 1.31 0 1.84.99 1.84 2.45v5.57h3.22l.01-5.96z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js" defer></script>
+<script src="cookie-consent.js" defer></script>
+</body>
+</html>

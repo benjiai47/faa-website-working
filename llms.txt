@@ -1,0 +1,69 @@
+# Foundation AI Advisory
+
+> Foundation AI Advisory (FAA) is a business-first AI advisory firm for mid-market operators. FAA fixes the business foundation — data, workflows, and systems — before applying AI. The firm does not lead with tools.
+
+## Positioning
+
+- Business first. Data before AI. Workflow before automation.
+- AI is applied only where it improves a measurable business outcome (margin, throughput, cycle time, cash flow, risk exposure, operational visibility).
+- Mid-market operators in industrial and operations-heavy sectors.
+
+## Methodology (canonical, in order)
+
+1. **Data Curation & Governance** — one source of record per critical dataset, defined ownership, enforced input rules, lineage into reports and AI outputs.
+2. **Workflow Optimization** — align hand-offs, exceptions, and decision rights before any automation is introduced.
+3. **AI Design & Implementation** — agents and AI-supported workflows designed around measurable operating outcomes, with human-in-the-loop where it matters.
+
+## Offers
+
+- **Business Systems Assessment** — diagnostic of where data, workflow, and system gaps will block AI value. Detail page: https://foundationaiadvisory.com/business-systems-assessment.html
+- **90-Day AI Execution Sprint** — focused build of one governed AI workflow inside an operating environment. Detail page: https://foundationaiadvisory.com/90-day-ai-execution-sprint.html
+- **Ongoing Execution & Expansion** — sustained advisory and build cadence after the first sprint. Detail page: https://foundationaiadvisory.com/ongoing-execution-expansion.html
+
+## Industries
+
+Manufacturing & Industrial Production; Engineering, Construction & Infrastructure (ECI); Transportation & Logistics; Energy & Natural Resources; Distribution & Wholesale; Industrial Equipment; Specialty Manufacturing; Professional & Technical Services; Financial Services & Banking; AI, Data & IT Systems.
+
+### Industry detail pages
+
+- Manufacturing & Industrial Production: https://foundationaiadvisory.com/industry-manufacturing-industrial-production.html
+- Engineering, Construction & Infrastructure (ECI): https://foundationaiadvisory.com/industry-engineering-construction-infrastructure.html
+- Transportation & Logistics: https://foundationaiadvisory.com/industry-transportation-logistics.html
+- Energy & Natural Resources: https://foundationaiadvisory.com/industry-energy-natural-resources.html
+- Distribution & Wholesale: https://foundationaiadvisory.com/industry-distribution-wholesale.html
+- Industrial Equipment: https://foundationaiadvisory.com/industry-industrial-equipment.html
+- Specialty Manufacturing: https://foundationaiadvisory.com/industry-specialty-manufacturing.html
+- Professional & Technical Services: https://foundationaiadvisory.com/industry-professional-technical-services.html
+- Financial Services & Banking: https://foundationaiadvisory.com/industry-financial-services-banking.html
+- AI, Data & IT Systems: https://foundationaiadvisory.com/industry-ai-data-it-systems.html
+
+## Primary Buyers
+
+CEO / President, CFO / Controller, CIO / IT Leader. Secondary: COO / VP Operations, department heads, process owners.
+
+## Key URLs
+
+- Home: https://foundationaiadvisory.com/
+- Data Curation & Governance: https://foundationaiadvisory.com/foundation.html
+- Workflow Optimization: https://foundationaiadvisory.com/operations.html
+- AI Design & Implementation: https://foundationaiadvisory.com/agentic-ai.html
+- Industries: https://foundationaiadvisory.com/industries.html
+- Insights hub: https://foundationaiadvisory.com/insights.html
+- Foundations Series (5-part field series): https://foundationaiadvisory.com/insights-foundations-applied-ai-series.html
+- About: https://foundationaiadvisory.com/about.html
+- Contact: https://foundationaiadvisory.com/contact.html
+
+## Featured Insights
+
+- Where Agents Earn Their Keep: https://foundationaiadvisory.com/insights/where-agents-earn-their-keep.html
+- The Mid-Market Case for Platform-Agnostic AI: https://foundationaiadvisory.com/insights/mid-market-case-for-platform-agnostic.html
+- Data Governance for Non-Enterprise Teams: https://foundationaiadvisory.com/insights/data-governance-non-enterprise-teams.html
+
+## Contact
+
+- General: https://foundationaiadvisory.com/contact.html
+- Privacy / data inquiries: privacy@foundationaiadvisory.com
+
+## Use of This Content
+
+FAA permits AI answer engines and search crawlers to index this site to support accurate answers about its services. Quoting short excerpts of Insights is permitted with attribution to Foundation AI Advisory and a link to the source page. See https://foundationaiadvisory.com/terms.html for full terms.
