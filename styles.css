@@ -1058,38 +1058,52 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 /* Foundations field series */
-.foundations-hub-hero,
 .foundations-article-hero {
   background: var(--faa-navy);
   color: var(--faa-white);
   padding: 88px 0 76px;
 }
-/* Hub hero: image stacked above the text block. */
-.foundations-hub-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 56px;
+
+/* ─── Foundations Series Hub — image-led, light theme ─────────────── */
+/* Section 1: full-bleed architecture image with subtle Ken Burns drift. */
+.foundations-hub-image-section {
+  width: 100%;
+  overflow: hidden;
+  background: var(--faa-navy); /* fallback while image loads */
 }
 .foundations-hub-image {
-  margin: 0;
-  border-radius: 6px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.10);
-}
-.foundations-hub-image img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 520px;
-  object-fit: contain;
-  background: var(--faa-navy);
+  will-change: transform;
+  animation: foundationsHubImageDrift 30s ease-in-out infinite alternate;
 }
-/* Foundations context block — sits between the navy hero and the 5-Part
-   card grid, frames why the series exists and what readers will get. */
+@keyframes foundationsHubImageDrift {
+  0%   { transform: scale(1.00); }
+  100% { transform: scale(1.04); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .foundations-hub-image { animation: none; }
+}
+
+/* Section 2: hub intro — white bg, navy/gray text. Lives directly below
+   the full-bleed image section. */
+.foundations-hub-intro {
+  background: var(--faa-white);
+  color: var(--faa-gray-600);
+  padding: 88px 0 56px;
+}
+.foundations-hub-intro .eyebrow            { color: var(--faa-blue); }
+.foundations-hub-intro .foundations-h1     { color: var(--faa-navy); }
+.foundations-hub-intro .foundations-lede   { color: var(--faa-gray-600); }
+.foundations-hub-intro .foundations-hub-panel        { border-left-color: var(--faa-blue-light); }
+.foundations-hub-intro .foundations-hub-panel span   { color: var(--faa-gray-400); }
+.foundations-hub-intro .foundations-hub-panel strong { color: var(--faa-navy); }
+
+/* Section 3: context block (between intro and the 5-Part card grid). */
 .foundations-hub-context {
   background: var(--faa-white);
-  padding: 64px 0 32px;
+  padding: 0 0 64px;
 }
 .foundations-context-lede {
   max-width: 880px;

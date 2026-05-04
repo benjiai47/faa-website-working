@@ -208,25 +208,23 @@
   function renderHub() {
     document.title = hub.title + " — Foundation AI Advisory";
     root.innerHTML = `
-      <section class="foundations-hub-hero">
-        <div class="container-faa foundations-hub-stack">
-          <figure class="foundations-hub-image">
-            <img src="assets/insights/foundations-series-architecture-hero.png" alt="Five layered operating planes — data, process, architecture, ROI sequencing, and governance — stacked as a single architecture for applied AI" />
-          </figure>
-          <div class="foundations-hub-grid">
-            <div>
-              <div class="eyebrow">${esc(hub.eyebrow)}</div>
-              <h1 class="foundations-h1">${esc(hub.title)}</h1>
-              ${hub.description.map((item) => `<p class="foundations-lede">${esc(item)}</p>`).join("")}
-              <div class="foundations-actions">
-                <a href="${hub.primary.href}" class="btn btn-primary">${esc(hub.primary.label)}</a>
-                <a href="${hub.secondary.href}" class="btn btn-outline-white">${esc(hub.secondary.label)}</a>
-              </div>
+      <section class="foundations-hub-image-section" aria-label="Foundations Series — Five Operating Layers">
+        <img class="foundations-hub-image" src="assets/insights/foundations-series-architecture-hero.png" alt="Five layered operating planes — data, process, architecture, ROI sequencing, and governance — stacked as a single architecture for applied AI" />
+      </section>
+      <section class="foundations-hub-intro">
+        <div class="container-faa foundations-hub-grid">
+          <div>
+            <div class="eyebrow">${esc(hub.eyebrow)}</div>
+            <h1 class="foundations-h1">${esc(hub.title)}</h1>
+            ${hub.description.map((item) => `<p class="foundations-lede">${esc(item)}</p>`).join("")}
+            <div class="foundations-actions">
+              <a href="${hub.primary.href}" class="btn btn-primary">${esc(hub.primary.label)}</a>
+              <a href="${hub.secondary.href}" class="btn btn-outline-navy">${esc(hub.secondary.label)}</a>
             </div>
-            <div class="foundations-hub-panel" aria-label="Series structure">
-              <span>Five operating layers</span>
-              <strong>Data → Process → Architecture → ROI → Governance</strong>
-            </div>
+          </div>
+          <div class="foundations-hub-panel" aria-label="Series structure">
+            <span>Five operating layers</span>
+            <strong>Data → Process → Architecture → ROI → Governance</strong>
           </div>
         </div>
       </section>
