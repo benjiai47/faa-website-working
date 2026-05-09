@@ -5,7 +5,7 @@ category: "Data Curation & Governance"
 topic: "Data"
 format: "Brief"
 excerpt: "Operational data lives in eight places at once. Until you know where, agents have nothing reliable to act on."
-image: "../assets/insights/insight-data-inventory.png"
+image: "../assets/insights/insight-data-inventory.webp"
 ---
 
 Most mid-market companies cannot answer a simple question:

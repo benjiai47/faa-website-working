@@ -1729,7 +1729,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   position: absolute;
   inset: -5%;
   z-index: 0;
-  background-image: url('assets/global-page-hero-background-flow.png');
+  background-image: url('assets/global-page-hero-background-flow.webp');
   background-color: var(--faa-navy-deep);
   background-size: cover;
   background-position: center;

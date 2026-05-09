@@ -165,7 +165,7 @@ function renderFinalCta(isFinal) {
 function renderHub() {
   return `<!--PRERENDERED-->
       <section class="foundations-hub-image-section" aria-label="Foundations Series — Five Operating Layers">
-        <img class="foundations-hub-image" src="assets/insights/foundations-series-architecture-hero.png" alt="Five layered operating planes — data, process, architecture, ROI sequencing, and governance — stacked as a single architecture for applied AI" />
+        <img class="foundations-hub-image" src="assets/insights/foundations-series-architecture-hero.webp" alt="Five layered operating planes — data, process, architecture, ROI sequencing, and governance — stacked as a single architecture for applied AI" />
       </section>
       <section class="foundations-hub-intro">
         <div class="container-faa foundations-hub-grid">

@@ -12,7 +12,7 @@ deck: "The fastest way to fail at AI is to point it at a workflow no one has aud
 excerpt: "The fastest way to fail at AI is to point it at a workflow no one has audited in five years."
 ctaLabel: "Start with a Business Systems Assessment"
 ctaHref: "mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry"
-image: "assets/insights/automating-broken-process-workflow-flow.png"
+image: "assets/insights/automating-broken-process-workflow-flow.webp"
 ---
 
 The pattern shows up in almost every mid-market AI initiative we are asked to evaluate.

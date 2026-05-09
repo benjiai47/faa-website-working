@@ -6,7 +6,7 @@ topic: "Process"
 format: "Podcast"
 excerpt: "Decision points, exceptions, and accountability lines that must exist before you write a single agent."
 audio: "../assets/podcasts/faa-workflow-optimization-podcast-01.mp3"
-contentImage: "../assets/insights/human-in-the-loop-decision-workflow-design.png"
+contentImage: "../assets/insights/human-in-the-loop-decision-workflow-design.webp"
 contentImageAlt: "Two professionals mapping decision workflows and process logic across structured diagrams and documents"
 contentImageCaption: "Real workflow mapping — where decisions, exceptions, and accountability actually live."
 ---

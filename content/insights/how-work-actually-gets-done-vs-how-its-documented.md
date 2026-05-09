@@ -12,7 +12,7 @@ deck: "The gap between the SOP and the reality is where mid-market value leaks e
 excerpt: "The gap between the SOP and the reality is where mid-market value leaks every day."
 ctaLabel: "Start with a Business Systems Assessment"
 ctaHref: "mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry"
-image: "assets/insights/human-in-the-loop-workflow-mapping.png"
+image: "assets/insights/human-in-the-loop-workflow-mapping.webp"
 ---
 
 Every mid-market business has two versions of every workflow.

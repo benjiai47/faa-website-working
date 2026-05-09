@@ -37,7 +37,7 @@ const personSchemas = [
     name: 'Ben DeMichael',
     jobTitle: 'Founder',
     description: 'Founder of Foundation AI Advisory. Operating-perspective adviser to mid-market companies on data governance, workflow optimization, and AI design and implementation.',
-    image: SITE + '/assets/about-leadership-ben-demichael-headshot.png',
+    image: SITE + '/assets/about-leadership-ben-demichael-headshot.webp',
     url: 'https://www.linkedin.com/in/benjamindemichael',
     sameAs: ['https://www.linkedin.com/in/benjamindemichael'],
     worksFor: ORG_REF,
@@ -156,14 +156,14 @@ const insightArticles = [
   { file: 'insights/how-work-actually-gets-done-vs-how-its-documented.html', md: 'content/insights/how-work-actually-gets-done-vs-how-its-documented.md', section: 'Workflow Optimization' },
 
   // Foundations Series
-  { file: 'insights-foundations-data-constraint.html', headline: 'Part 1 — The Data Constraint', section: 'Data Curation & Governance', description: 'Why mid-market AI initiatives stall on data quality, ownership, and structure before any model is involved.', image: SITE + '/assets/insights/foundations-series-architecture-hero.png' },
-  { file: 'insights-foundations-process-before-ai.html', headline: 'Part 2 — Process Before AI', section: 'Workflow Optimization', description: 'Why workflow redesign has to come before automation, and what changes when it does.', image: SITE + '/assets/insights/foundations-series-architecture-hero.png' },
-  { file: 'insights-foundations-ai-architecture.html', headline: 'Part 3 — Architecture: The System Behind the System', section: 'AI Design & Implementation', description: 'The five operating layers behind reliable applied AI in mid-market environments.', image: SITE + '/assets/insights/foundations-series-architecture-hero.png' },
-  { file: 'insights-foundations-ai-roi-sequencing.html', headline: 'Part 4 — ROI Sequencing: Where AI Actually Creates Value', section: 'AI Design & Implementation', description: 'How to sequence AI investments around margin, throughput, cycle time, cash flow, risk, and operational visibility.', image: SITE + '/assets/insights/foundations-series-architecture-hero.png' },
-  { file: 'insights-foundations-ai-governance.html', headline: 'Part 5 — AI Governance That Actually Holds', section: 'AI Design & Implementation', description: 'Lightweight governance for mid-market AI: ownership, controls, escalation paths, and human oversight at the right points.', image: SITE + '/assets/insights/foundations-series-architecture-hero.png' },
+  { file: 'insights-foundations-data-constraint.html', headline: 'Part 1 — The Data Constraint', section: 'Data Curation & Governance', description: 'Why mid-market AI initiatives stall on data quality, ownership, and structure before any model is involved.', image: SITE + '/assets/insights/foundations-series-architecture-hero.webp' },
+  { file: 'insights-foundations-process-before-ai.html', headline: 'Part 2 — Process Before AI', section: 'Workflow Optimization', description: 'Why workflow redesign has to come before automation, and what changes when it does.', image: SITE + '/assets/insights/foundations-series-architecture-hero.webp' },
+  { file: 'insights-foundations-ai-architecture.html', headline: 'Part 3 — Architecture: The System Behind the System', section: 'AI Design & Implementation', description: 'The five operating layers behind reliable applied AI in mid-market environments.', image: SITE + '/assets/insights/foundations-series-architecture-hero.webp' },
+  { file: 'insights-foundations-ai-roi-sequencing.html', headline: 'Part 4 — ROI Sequencing: Where AI Actually Creates Value', section: 'AI Design & Implementation', description: 'How to sequence AI investments around margin, throughput, cycle time, cash flow, risk, and operational visibility.', image: SITE + '/assets/insights/foundations-series-architecture-hero.webp' },
+  { file: 'insights-foundations-ai-governance.html', headline: 'Part 5 — AI Governance That Actually Holds', section: 'AI Design & Implementation', description: 'Lightweight governance for mid-market AI: ownership, controls, escalation paths, and human oversight at the right points.', image: SITE + '/assets/insights/foundations-series-architecture-hero.webp' },
 
   // Standalone insight pages
-  { file: 'insights-prompt-precision-context-engineering-operators.html', headline: 'Prompt Precision and Context Engineering for Operators', section: 'AI Design & Implementation', description: 'A working session on writing prompts that hold up under operational load.', image: SITE + '/assets/insights/prompt-precision-context-engineering-operators.png', authorOverride: 'Ben DeMichael' },
+  { file: 'insights-prompt-precision-context-engineering-operators.html', headline: 'Prompt Precision and Context Engineering for Operators', section: 'AI Design & Implementation', description: 'A working session on writing prompts that hold up under operational load.', image: SITE + '/assets/insights/prompt-precision-context-engineering-operators.webp', authorOverride: 'Ben DeMichael' },
 ];
 
 let articleCount = 0;

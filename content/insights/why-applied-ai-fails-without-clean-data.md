@@ -5,7 +5,7 @@ category: "Data Curation & Governance"
 topic: "Data"
 format: "Article"
 excerpt: "Most failed AI deployments are not AI problems. They are data problems wearing an AI label. Here is how to tell the difference before you spend."
-image: "../assets/insights/insight-data-clean-data.png"
+image: "../assets/insights/insight-data-clean-data.webp"
 ---
 
 Most AI initiatives do not fail because the model is weak.
