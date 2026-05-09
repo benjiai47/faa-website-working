@@ -2085,6 +2085,60 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     linear-gradient(180deg, rgba(15,23,42,0.20) 0%, rgba(15,23,42,0.55) 60%, rgba(15,23,42,0.85) 100%),
     linear-gradient(90deg, rgba(15,23,42,0.65) 0%, rgba(15,23,42,0.25) 45%, transparent 70%);
 }
+
+/* Industry detail-page hero: re-uses the homepage industry card image as a
+   subtle, darkened background. The matching image is set per-page via an
+   inline background-image on .page-hero-image (no duplicated darkened
+   asset files). This rule strengthens the navy overlay so the white hero
+   text — including the FAA blue 3px vertical accent on .hero-text-block —
+   remains readable on every image, with a darker left zone (where the
+   text sits) and a slightly more open right zone so the imagery is still
+   visible but restrained.
+
+   Structure used (existing .page-hero markup is preserved):
+     <section class="page-hero industry-hero">
+       <div class="page-hero-image" style="background-image: url('/assets/homepage-industry-*.webp')"></div>
+       <div class="page-hero-overlay"></div>
+       <div class="container-faa page-hero-content">...</div>
+     </section>
+*/
+.industry-hero {
+  background-color: var(--faa-navy-deep);
+}
+.industry-hero .page-hero-image {
+  /* Slight desaturation + brightness clamp keeps each industry image
+     reading as a unified family across the 10 pages, even though the
+     source photos vary in tone. Pure CSS — no edited image files. */
+  filter: saturate(0.78) brightness(0.92);
+}
+.industry-hero .page-hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(8,18,36,0.94) 0%,
+      rgba(8,18,36,0.86) 42%,
+      rgba(8,18,36,0.68) 100%),
+    linear-gradient(180deg,
+      rgba(8,18,36,0.30) 0%,
+      rgba(8,18,36,0.55) 60%,
+      rgba(8,18,36,0.90) 100%);
+}
+@media (max-width: 767px) {
+  /* Mobile: tighten the left-side darken so headlines, deks, and CTAs
+     stay legible when the image crops to a narrower portion of the
+     composition. */
+  .industry-hero .page-hero-overlay {
+    background:
+      linear-gradient(180deg,
+        rgba(8,18,36,0.78) 0%,
+        rgba(8,18,36,0.86) 60%,
+        rgba(8,18,36,0.94) 100%),
+      linear-gradient(90deg,
+        rgba(8,18,36,0.78) 0%,
+        rgba(8,18,36,0.62) 60%,
+        rgba(8,18,36,0.50) 100%);
+  }
+}
+
 .applied-ai-hero {
   position: relative;
   overflow: hidden;
