@@ -2139,6 +2139,47 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
+/* About page hero: Cleveland skyline / AI network composition. The image
+   carries its visual weight on the right side (skyline + network lines),
+   which lets a strong left-side navy gradient keep the hero copy fully
+   legible while still showing the city imagery on the right. The
+   .page-hero-image div carries the image (set inline per page) plus
+   background-position: center right; this rule strengthens the overlay
+   beyond the global .page-hero-overlay default. */
+.about-hero {
+  background-color: var(--faa-navy-deep);
+}
+.about-hero .page-hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(8,18,36,0.96) 0%,
+      rgba(8,18,36,0.88) 42%,
+      rgba(8,18,36,0.55) 100%),
+    linear-gradient(180deg,
+      rgba(8,18,36,0.10) 0%,
+      rgba(8,18,36,0.30) 65%,
+      rgba(8,18,36,0.70) 100%);
+}
+@media (max-width: 767px) {
+  /* Mobile: skyline crops aggressively at the right edge; pull the
+     darken across the full width so the headline and dek do not have
+     skyline detail behind them. */
+  .about-hero .page-hero-image {
+    background-position: 75% center;
+  }
+  .about-hero .page-hero-overlay {
+    background:
+      linear-gradient(180deg,
+        rgba(8,18,36,0.82) 0%,
+        rgba(8,18,36,0.88) 55%,
+        rgba(8,18,36,0.94) 100%),
+      linear-gradient(90deg,
+        rgba(8,18,36,0.78) 0%,
+        rgba(8,18,36,0.70) 60%,
+        rgba(8,18,36,0.60) 100%);
+  }
+}
+
 .applied-ai-hero {
   position: relative;
   overflow: hidden;
