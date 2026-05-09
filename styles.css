@@ -1443,6 +1443,44 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   color: var(--faa-navy);
 }
 
+/* Industry tile with background image (homepage "By Industry" grid). */
+.industry-card {
+  position: relative;
+  isolation: isolate;
+}
+.industry-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+  opacity: 0.22;
+  transition: opacity 220ms ease-out, transform 600ms ease-out;
+  pointer-events: none;
+}
+/* Subtle white wash to lift the image off pure white card surface and
+   keep body copy readable; the wash sits above the image but below content. */
+.industry-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.85) 100%);
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 220ms ease-out;
+}
+.industry-card:hover .industry-card-bg {
+  opacity: 0.32;
+  transform: scale(1.03);
+}
+.industry-card:hover::before {
+  opacity: 0.85;
+}
+/* Card hover state already lifts + adds blue border via .card:hover; the
+   blue-50 background tint there is hidden behind the image, which is fine. */
+
 /* Container */
 .container-faa { max-width: 1280px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
 @media (min-width: 768px) {
