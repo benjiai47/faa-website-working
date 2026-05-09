@@ -16,9 +16,9 @@
 
 ## Offers
 
-- **Business Systems Assessment** — diagnostic of where data, workflow, and system gaps will block AI value. Detail page: https://foundationaiadvisory.com/business-systems-assessment.html
-- **90-Day AI Execution Sprint** — focused build of one governed AI workflow inside an operating environment. Detail page: https://foundationaiadvisory.com/90-day-ai-execution-sprint.html
-- **Ongoing Execution & Expansion** — sustained advisory and build cadence after the first sprint. Detail page: https://foundationaiadvisory.com/ongoing-execution-expansion.html
+- **Business Systems Assessment** — diagnostic of where data, workflow, and system gaps will block AI value. Detail page: https://foundationaiadvisory.com/business-systems-assessment/
+- **90-Day AI Execution Sprint** — focused build of one governed AI workflow inside an operating environment. Detail page: https://foundationaiadvisory.com/90-day-ai-execution-sprint/
+- **Ongoing Execution & Expansion** — sustained advisory and build cadence after the first sprint. Detail page: https://foundationaiadvisory.com/ongoing-execution-expansion/
 
 ## Industries
 
@@ -26,16 +26,16 @@ Manufacturing & Industrial Production; Engineering, Construction & Infrastructur
 
 ### Industry detail pages
 
-- Manufacturing & Industrial Production: https://foundationaiadvisory.com/industry-manufacturing-industrial-production.html
-- Engineering, Construction & Infrastructure (ECI): https://foundationaiadvisory.com/industry-engineering-construction-infrastructure.html
-- Transportation & Logistics: https://foundationaiadvisory.com/industry-transportation-logistics.html
-- Energy & Natural Resources: https://foundationaiadvisory.com/industry-energy-natural-resources.html
-- Distribution & Wholesale: https://foundationaiadvisory.com/industry-distribution-wholesale.html
-- Industrial Equipment: https://foundationaiadvisory.com/industry-industrial-equipment.html
-- Specialty Manufacturing: https://foundationaiadvisory.com/industry-specialty-manufacturing.html
-- Professional & Technical Services: https://foundationaiadvisory.com/industry-professional-technical-services.html
-- Financial Services & Banking: https://foundationaiadvisory.com/industry-financial-services-banking.html
-- AI, Data & IT Systems: https://foundationaiadvisory.com/industry-ai-data-it-systems.html
+- Manufacturing & Industrial Production: https://foundationaiadvisory.com/industry-manufacturing-industrial-production/
+- Engineering, Construction & Infrastructure (ECI): https://foundationaiadvisory.com/industry-engineering-construction-infrastructure/
+- Transportation & Logistics: https://foundationaiadvisory.com/industry-transportation-logistics/
+- Energy & Natural Resources: https://foundationaiadvisory.com/industry-energy-natural-resources/
+- Distribution & Wholesale: https://foundationaiadvisory.com/industry-distribution-wholesale/
+- Industrial Equipment: https://foundationaiadvisory.com/industry-industrial-equipment/
+- Specialty Manufacturing: https://foundationaiadvisory.com/industry-specialty-manufacturing/
+- Professional & Technical Services: https://foundationaiadvisory.com/industry-professional-technical-services/
+- Financial Services & Banking: https://foundationaiadvisory.com/industry-financial-services-banking/
+- AI, Data & IT Systems: https://foundationaiadvisory.com/industry-ai-data-it-systems/
 
 ## Primary Buyers
 
@@ -44,28 +44,28 @@ CEO / President, CFO / Controller, CIO / IT Leader. Secondary: COO / VP Operatio
 ## Key URLs
 
 - Home: https://foundationaiadvisory.com/
-- Data Curation & Governance: https://foundationaiadvisory.com/foundation.html
-- Workflow Optimization: https://foundationaiadvisory.com/operations.html
-- AI Design & Implementation: https://foundationaiadvisory.com/agentic-ai.html
-- Industries: https://foundationaiadvisory.com/industries.html
-- Insights hub: https://foundationaiadvisory.com/insights.html
-- Foundations Series (5-part field series): https://foundationaiadvisory.com/insights-foundations-applied-ai-series.html
-- About: https://foundationaiadvisory.com/about.html
-- Contact: https://foundationaiadvisory.com/contact.html
+- Data Curation & Governance: https://foundationaiadvisory.com/foundation/
+- Workflow Optimization: https://foundationaiadvisory.com/operations/
+- AI Design & Implementation: https://foundationaiadvisory.com/agentic-ai/
+- Industries: https://foundationaiadvisory.com/industries/
+- Insights hub: https://foundationaiadvisory.com/insights/
+- Foundations Series (5-part field series): https://foundationaiadvisory.com/insights-foundations-applied-ai-series/
+- About: https://foundationaiadvisory.com/about/
+- Contact: https://foundationaiadvisory.com/contact/
 
 ## Featured Insights
 
-- Where Agents Earn Their Keep: https://foundationaiadvisory.com/insights/where-agents-earn-their-keep.html
-- The Mid-Market Case for Platform-Agnostic AI: https://foundationaiadvisory.com/insights/mid-market-case-for-platform-agnostic.html
-- Data Governance for Non-Enterprise Teams: https://foundationaiadvisory.com/insights/data-governance-non-enterprise-teams.html
-- Automating a Broken Process Scales the Problem: https://foundationaiadvisory.com/insights/automating-a-broken-process-scales-the-problem.html
-- How Work Actually Gets Done vs. How It's Documented: https://foundationaiadvisory.com/insights/how-work-actually-gets-done-vs-how-its-documented.html
+- Where Agents Earn Their Keep: https://foundationaiadvisory.com/insights/where-agents-earn-their-keep/
+- The Mid-Market Case for Platform-Agnostic AI: https://foundationaiadvisory.com/insights/mid-market-case-for-platform-agnostic/
+- Data Governance for Non-Enterprise Teams: https://foundationaiadvisory.com/insights/data-governance-non-enterprise-teams/
+- Automating a Broken Process Scales the Problem: https://foundationaiadvisory.com/insights/automating-a-broken-process-scales-the-problem/
+- How Work Actually Gets Done vs. How It's Documented: https://foundationaiadvisory.com/insights/how-work-actually-gets-done-vs-how-its-documented/
 
 ## Contact
 
-- General: https://foundationaiadvisory.com/contact.html
+- General: https://foundationaiadvisory.com/contact/
 - Privacy / data inquiries: privacy@foundationaiadvisory.com
 
 ## Use of This Content
 
-FAA permits AI answer engines and search crawlers to index this site to support accurate answers about its services. Quoting short excerpts of Insights is permitted with attribution to Foundation AI Advisory and a link to the source page. See https://foundationaiadvisory.com/terms.html for full terms.
+FAA permits AI answer engines and search crawlers to index this site to support accurate answers about its services. Quoting short excerpts of Insights is permitted with attribution to Foundation AI Advisory and a link to the source page. See https://foundationaiadvisory.com/terms/ for full terms.

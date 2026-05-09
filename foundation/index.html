@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Data Curation &amp; Governance for AI Readiness | Foundation AI Advisory</title>
+<meta name="description" content="Foundation AI Advisory helps mid-market operators clean, structure, govern, and control business data before applying AI to workflows, reporting, and decision-making." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://foundationaiadvisory.com/foundation/" />
+<link rel="icon" type="image/png" href="/assets/favicon.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Data Curation &amp; Governance for AI Readiness | Foundation AI Advisory" />
+<meta property="og:description" content="Foundation AI Advisory helps mid-market operators clean, structure, govern, and control business data before applying AI to workflows, reporting, and decision-making." />
+<meta property="og:url" content="https://foundationaiadvisory.com/foundation/" />
+<meta property="og:image" content="https://foundationaiadvisory.com/assets/data-curation-governance-hero-layered-data-architecture.webp" />
+<meta property="og:site_name" content="Foundation AI Advisory" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Foundation AI Advisory","legalName":"Foundation AI Advisory, LLC","url":"https://foundationaiadvisory.com/","logo":"https://foundationaiadvisory.com/assets/global-header-logo-wordmark.png","description":"A business-first AI advisory firm for mid-market operators. FAA fixes the data, workflow, and system foundation before applying AI.","founder":{"@type":"Person","name":"Ben DeMichael"},"foundingLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressRegion":"OH","addressCountry":"US"}},"knowsAbout":["Data Curation and Governance","Workflow Optimization","AI Design and Implementation","Mid-Market AI Strategy","Applied AI for Industrial Operations"],"sameAs":["https://www.linkedin.com/company/foundation-ai-advisory"],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"privacy@foundationaiadvisory.com","url":"https://foundationaiadvisory.com/contact/","availableLanguage":["English"]}}</script>
+<link rel="stylesheet" href="/tailwind-static.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://foundationaiadvisory.com/"},{"@type":"ListItem","position":2,"name":"Data Curation & Governance","item":"https://foundationaiadvisory.com/foundation/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Data Curation & Governance?","acceptedAnswer":{"@type":"Answer","text":"Data Curation & Governance is the process of cleaning, structuring, defining, owning, and controlling business data so it can be trusted for reporting, workflows, decision-making, and AI."}},{"@type":"Question","name":"Why does FAA start with data before AI?","acceptedAnswer":{"@type":"Answer","text":"AI depends on the quality of the information underneath it. If definitions conflict, ownership is unclear, or source systems disagree, AI will amplify the problem instead of solving it."}},{"@type":"Question","name":"Who should own data governance?","acceptedAnswer":{"@type":"Answer","text":"Ownership should sit with the business function that understands the data and its operational impact, supported by IT for access, architecture, security, and system controls."}},{"@type":"Question","name":"What business outcomes does better data governance improve?","acceptedAnswer":{"@type":"Answer","text":"Better data governance improves operational visibility, cycle time, cash flow, margin, risk exposure, and throughput by reducing reconciliation work, reporting conflict, rework, and decision delays."}},{"@type":"Question","name":"How does data governance prepare a company for AI?","acceptedAnswer":{"@type":"Answer","text":"It gives AI systems reliable inputs, clear definitions, traceable sources, access rules, and accountable owners, which makes outputs easier to validate, monitor, and use in real operations."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Data Curation & Governance","name":"Data Curation & Governance Advisory","provider":{"@type":"Organization","name":"Foundation AI Advisory","url":"https://foundationaiadvisory.com/","logo":"https://foundationaiadvisory.com/assets/global-header-logo-wordmark.png"},"areaServed":"United States","audience":{"@type":"BusinessAudience","name":"Mid-Market Operators"},"description":"FAA's Data Curation & Governance practice helps mid-market operators turn scattered operational data — across ERP, CRM, finance, field systems, and spreadsheets — into a structured, governed, and trusted foundation for reporting, workflows, and AI.","serviceOutput":"A governed source of truth per critical dataset, named ownership, enforced input rules, and lineage into reports and AI outputs.","url":"https://foundationaiadvisory.com/foundation/"}</script>
+</head>
+<body class="bg-white"><a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="sticky top-0 z-40 bg-white border-b" style="border-color: var(--faa-gray-100);" id="site-header">
+  <div class="container-faa flex items-center justify-between relative" style="height:96px;">
+    <a href="/" class="flex items-center shrink-0" aria-label="Foundation AI Advisory home">
+      <img src="/assets/global-header-logo-wordmark.png" alt="Foundation AI Advisory" style="height:48px;width:auto;max-width:none;display:block;" />
+    </a>
+
+    <nav class="hidden xl:flex items-center gap-6 h-full mx-6" aria-label="Primary">
+      <a href="/foundation/" class="utilnav-link" style="height:96px;" aria-current="page">Data Curation &amp; Governance</a>
+      <a href="/operations/" class="utilnav-link" style="height:96px;">Workflow Optimization</a>
+      <a href="/agentic-ai/" class="utilnav-link" style="height:96px;">AI Design &amp; Implementation</a>
+      <button type="button" class="utilnav-link" data-mega="industries" aria-expanded="false" aria-controls="mega-industries" aria-haspopup="true">
+        Where We Work
+        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+      </button>
+      <button type="button" class="utilnav-link" data-mega="insights" aria-expanded="false" aria-controls="mega-insights" aria-haspopup="true">
+        Insights
+        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+      </button>
+      <a href="/about/" class="utilnav-link" style="height:96px;">About</a>
+    </nav>
+
+    <div class="flex items-center shrink-0">
+      <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary hidden sm:inline-flex">Business Systems Assessment</a>
+    </div>
+  </div>
+
+  <div id="mega-industries" class="mega-menu" role="region" aria-label="Industries">
+    <div class="mega-menu-inner">
+      <h4>Industries</h4>
+      <div class="mega-grid">
+        <a href="/industry-manufacturing-industrial-production/" class="mega-link">Manufacturing &amp; Industrial Production<span class="mega-link-dek">Throughput, yield, plant floor</span></a>
+        <a href="/industry-engineering-construction-infrastructure/" class="mega-link">Engineering, Construction &amp; Infrastructure (ECI)<span class="mega-link-dek">Field-to-office, project controls</span></a>
+        <a href="/industry-transportation-logistics/" class="mega-link">Transportation &amp; Logistics<span class="mega-link-dek">Forecasting, dispatch, freight</span></a>
+        <a href="/industry-energy-natural-resources/" class="mega-link">Energy &amp; Natural Resources<span class="mega-link-dek">Asset reliability, regulatory trails</span></a>
+        <a href="/industry-distribution-wholesale/" class="mega-link">Distribution &amp; Wholesale<span class="mega-link-dek">Inventory, demand, exception flow</span></a>
+        <a href="/industry-industrial-equipment/" class="mega-link">Industrial Equipment<span class="mega-link-dek">Aftermarket, parts, service</span></a>
+        <a href="/industry-specialty-manufacturing/" class="mega-link">Specialty Manufacturing<span class="mega-link-dek">High-mix, low-volume reality</span></a>
+        <a href="/industry-professional-technical-services/" class="mega-link">Professional &amp; Technical Services<span class="mega-link-dek">Knowledge work, delivery systems</span></a>
+        <a href="/industry-financial-services-banking/" class="mega-link">Financial Services &amp; Banking<span class="mega-link-dek">Controls, reporting, risk</span></a>
+        <a href="/industry-ai-data-it-systems/" class="mega-link">AI, Data &amp; IT Systems<span class="mega-link-dek">System owners, data teams</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="mega-insights" class="mega-menu" role="region" aria-label="Insights">
+    <div class="mega-menu-inner">
+      <h4>Insights</h4>
+      <div class="mega-grid">
+        <a href="/foundation/" class="mega-link">Data Curation &amp; Governance<span class="mega-link-dek">Data before anything else</span></a>
+        <a href="/operations/" class="mega-link">Workflow Optimization<span class="mega-link-dek">Fix process, then apply AI</span></a>
+          <a href="/agentic-ai/" class="mega-link">AI Design &amp; Implementation<span class="mega-link-dek">Designed around measurable outcomes</span></a>
+        <a href="/insights/#foundations-series" class="mega-link">Foundations Series<span class="mega-link-dek">Five-part field series</span></a>
+        <a href="/insights/?format=brief" class="mega-link">Briefs<span class="mega-link-dek">Short-form analyses</span></a>
+        <a href="/insights/?format=field-note" class="mega-link">Field Notes<span class="mega-link-dek">From the engagement floor</span></a>
+          <a href="/insights/?format=infographic" class="mega-link">Infographics<span class="mega-link-dek">Visual operating explainers</span></a>
+        <a href="/insights/?format=podcast" class="mega-link">Podcast<span class="mega-link-dek">Operator conversations</span></a>
+        <a href="/insights/?format=video" class="mega-link">Video<span class="mega-link-dek">Working sessions</span></a>
+        <a href="/insights/#subscribe" class="mega-link">Subscribe<span class="mega-link-dek">Get the running record</span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ============================================================= -->
+<!-- HERO                                                          -->
+<!-- ============================================================= -->
+<section class="page-hero methodology-hero">
+  <div class="page-hero-image" style="background-image: url('assets/data-curation-governance-hero-layered-data-architecture.webp'); background-position: center right;" aria-hidden="true"></div>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="container-faa page-hero-content">
+    <div class="hero-text-block">
+      <div class="eyebrow" style="color: rgba(255,255,255,0.85);">Methodology &middot; 01 &mdash; Data Curation &amp; Governance</div>
+      <h1 class="hero-headline mt-5">AI Inherits Every Data Problem You Haven&rsquo;t Solved.</h1>
+      <p class="hero-dek">Most AI investments don&rsquo;t fail at the model. They fail at the inputs underneath it &mdash; duplicate records, disconnected systems, workaround spreadsheets, tribal knowledge that never made it into the data layer. AI doesn&rsquo;t ignore those gaps. It runs faster than your team can catch them.</p>
+      <p class="hero-dek">For mid-market operators, the next two years separate compounding from accumulating. Compounding builds margin, throughput, and decisions you can defend. Accumulating produces faster errors, hidden exposure, and a system no one trusts.</p>
+      <ul class="hero-proof-list">
+        <li>Unify conflicting ERP, CRM, finance, spreadsheet, and field-system data</li>
+        <li>Define ownership, data lineage, access controls, and decision rights</li>
+        <li>Prepare operational data for workflow automation and AI implementation</li>
+      </ul>
+      <div class="mt-8">
+        <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary">Start with a Business Systems Assessment</a>
+      </div>
+      <p class="hero-trust-line">FAA fixes the business foundation first, then applies AI where it can produce measurable operating results.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ============================================================= -->
+<!-- BUSINESS OUTCOMES STRIP                                       -->
+<!-- ============================================================= -->
+<section class="outcomes-strip" aria-label="Business outcomes improved by governed data">
+  <div class="container-faa">
+    <div class="outcomes-strip-inner">
+      <div class="outcomes-strip-label">Business outcomes improved by governed data</div>
+      <ul class="outcomes-strip-list">
+        <li>Faster reporting cycles</li>
+        <li>Lower reconciliation effort</li>
+        <li>Cleaner handoffs</li>
+        <li>Better workflow automation</li>
+        <li>Reduced operating risk</li>
+        <li>More reliable AI outputs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- EXECUTIVE ANSWER (AEO)                                        -->
+<!-- ============================================================= -->
+<section class="bg-white">
+  <div class="container-faa section-y">
+    <div class="methodology-intro-grid">
+      <div class="methodology-intro-text">
+        <div class="eyebrow" style="color: var(--faa-navy);">Executive Answer</div>
+        <h2 class="h2 mt-3">Data Curation &amp; Governance Turns Scattered Business Data Into a Trusted Operating System</h2>
+        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+          Before AI can improve the business, leaders need to know which data they trust, who owns it, how it is defined, where it comes from, and where it breaks. Data Curation &amp; Governance turns scattered operational data into a structured, governed, and usable foundation for reporting, workflow automation, and AI.
+        </p>
+        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+          For mid-market operators, the problem is rarely a total lack of data. The problem is that ERP data, finance reports, spreadsheets, field systems, CRM records, and manual workarounds often tell different versions of the truth. That creates rework, slow reporting cycles, weak handoffs, unclear accountability, and decision risk.
+        </p>
+        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+          FAA starts here because AI will not resolve those conflicts on its own. It will inherit the definitions, gaps, exceptions, and ownership issues already inside the business. Our work is to identify the trusted sources, clean the operating data, define ownership, map lineage, and establish controls before AI is designed or implemented.
+        </p>
+        <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="read-link" style="display: inline-block; margin-top: 28px; font-size: 15px; font-weight: 600;">Assess your data foundation&nbsp;<span class="arrow">&rarr;</span></a>
+      </div>
+
+      <aside class="methodology-aeo" aria-label="What this answers about Data Curation and Governance">
+        <div class="eyebrow" style="color: var(--faa-navy);">What This Answers</div>
+        <dl class="aeo-faq" style="margin-top: 20px;">
+          <div class="aeo-faq-item">
+            <dt>What is Data Curation &amp; Governance?</dt>
+            <dd>Data Curation &amp; Governance is the process of cleaning, structuring, defining, owning, and controlling business data so it can be trusted for reporting, workflows, decision-making, and AI.</dd>
+          </div>
+          <div class="aeo-faq-item">
+            <dt>Why does FAA start with data before AI?</dt>
+            <dd>AI depends on the quality of the information underneath it. If definitions conflict, ownership is unclear, or source systems disagree, AI will amplify the problem instead of solving it.</dd>
+          </div>
+          <div class="aeo-faq-item">
+            <dt>Who should own data governance?</dt>
+            <dd>Ownership should sit with the business function that understands the data and its operational impact, supported by IT for access, architecture, security, and <a href="/operations/">system controls</a>.</dd>
+          </div>
+          <div class="aeo-faq-item">
+            <dt>What business outcomes does better data governance improve?</dt>
+            <dd>Better data governance improves operational visibility, cycle time, cash flow, margin, risk exposure, and throughput by reducing reconciliation work, reporting conflict, rework, and decision delays.</dd>
+          </div>
+          <div class="aeo-faq-item">
+            <dt>How does data governance prepare a company for AI?</dt>
+            <dd>It gives <a href="/agentic-ai/">AI systems</a> reliable inputs, clear definitions, traceable sources, access rules, and accountable owners, which makes outputs easier to validate, monitor, and use in real operations.</dd>
+          </div>
+        </dl>
+        <p class="aeo-closing">The goal is not cleaner data for its own sake. The goal is a business foundation strong enough to support automation, analytics, and AI without scaling confusion.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============================================================= -->
+<!-- COMMON DATA PROBLEMS                                          -->
+<!-- ============================================================= -->
+<section class="bg-white border-t" style="border-color: var(--faa-gray-100);">
+  <div class="container-faa section-y">
+    <div class="max-w-3xl mb-12 lg:mb-14">
+      <div class="eyebrow" style="color: var(--faa-navy);">Pre-AI Diagnostics</div>
+      <h2 class="h2 mt-3">Common Data Problems We Find Before AI</h2>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        FAA&rsquo;s Business Systems Assessment surfaces these patterns in nearly every mid-market environment. Each one quietly amplifies under automation and AI.
+      </p>
+    </div>
+    <div class="data-problems-grid">
+      <div class="data-problem-card">
+        <h3 class="data-problem-card__title">Conflicting definitions</h3>
+        <p class="data-problem-card__dek">Revenue, margin, customer, project, order, inventory, and utilization are defined differently across teams.</p>
+      </div>
+      <div class="data-problem-card">
+        <h3 class="data-problem-card__title">Spreadsheet infrastructure</h3>
+        <p class="data-problem-card__dek">Critical business logic lives in offline files, personal workbooks, or manual reporting routines.</p>
+      </div>
+      <div class="data-problem-card">
+        <h3 class="data-problem-card__title">Unclear ownership</h3>
+        <p class="data-problem-card__dek">No one owns the definition, quality, access, or correction process for critical operating data.</p>
+      </div>
+      <div class="data-problem-card">
+        <h3 class="data-problem-card__title">Disconnected systems</h3>
+        <p class="data-problem-card__dek">ERP, CRM, finance, field, and project systems do not share a clean operating model.</p>
+      </div>
+      <div class="data-problem-card">
+        <h3 class="data-problem-card__title">Weak lineage</h3>
+        <p class="data-problem-card__dek">Leaders cannot trace where numbers came from, what changed, or why reports disagree.</p>
+      </div>
+      <div class="data-problem-card">
+        <h3 class="data-problem-card__title">AI readiness gaps</h3>
+        <p class="data-problem-card__dek">Data is available, but not structured, governed, or reliable enough for AI-supported workflows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 1. THE PROBLEM                                                -->
+<!-- ============================================================= -->
+<section class="bg-white">
+  <div class="container-faa section-y">
+    <div class="max-w-3xl mb-12 lg:mb-16">
+      <div class="eyebrow" style="color: var(--faa-navy);">What We See in the Field</div>
+      <h2 class="h2 mt-3">Most Data Isn&rsquo;t Broken. It&rsquo;s Uncontrolled.</h2>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        Operators don&rsquo;t lack data. They lack a single, governed version of it. After a decade of system additions, vendor switches, and reporting workarounds, every team has its own answer to the same question &mdash; and each one is technically defensible.
+      </p>
+    </div>
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10" style="list-style:none;padding:0;margin:0;">
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Three systems, three answers.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">The ERP shows one revenue number. The BI tool shows a second. The CFO&rsquo;s spreadsheet shows a third. None are technically wrong. All use different definitions.</p>
+      </li>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">A spreadsheet runs the business.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">A monthly Excel file owned by one person, exported, reformatted, and emailed to leadership. Lose that person, lose the report.</p>
+      </li>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Master data has never been cleaned.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Item, customer, and vendor masters built over a decade. Duplicates, abbreviations, dead records. Plant managers know which ones are real. New hires and AI agents don&rsquo;t.</p>
+      </li>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Reporting is reconciliation, not insight.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Finance closes the books not by analyzing operations, but by chasing why the warehouse number doesn&rsquo;t match the GL.</p>
+      </li>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Common terms mean different things.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">&ldquo;Margin&rdquo; means four different things depending on who&rsquo;s in the room. Same for cycle time, on-time delivery, utilization, and lead time.</p>
+      </li>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
+        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Workarounds became infrastructure.</div>
+        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Ad-hoc Access databases, sticky-note SOPs, integration scripts written by an intern in 2019. Nobody owns them. Everyone depends on them.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 2. WHY THIS MATTERS                                           -->
+<!-- ============================================================= -->
+<section style="background: var(--faa-gray-50);">
+  <div class="container-faa section-y">
+    <div class="max-w-3xl mb-12 lg:mb-14">
+      <div class="eyebrow" style="color: var(--faa-navy);">Why It Matters</div>
+      <h2 class="h2 mt-3">This Is Not an IT Problem.</h2>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        Bad data doesn&rsquo;t show up on a P&amp;L line. It shows up in every line. The cost is rarely tracked because the symptom is everywhere &mdash; slow decisions, missed forecasts, and the quiet margin you can&rsquo;t recover because you can&rsquo;t see it leaving.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div class="card p-6" style="border-color: var(--faa-gray-200);">
+        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Margin Leakage</div>
+        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.55;">Pricing exceptions, freight chargebacks, scrap, and rework that no one is reporting because the data lives in three places.</p>
+      </div>
+      <div class="card p-6" style="border-color: var(--faa-gray-200);">
+        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Slow Decisions</div>
+        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.55;">Leadership debates whose numbers are right instead of what to do. Decisions wait for the next reconciliation cycle.</p>
+      </div>
+      <div class="card p-6" style="border-color: var(--faa-gray-200);">
+        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Forecasting</div>
+        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.55;">Forecasts built on inconsistent inputs. Variances explained after the fact, not anticipated.</p>
+      </div>
+      <div class="card p-6" style="border-color: var(--faa-gray-200);">
+        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Operational Risk</div>
+        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.55;">Audit, regulatory, and customer questions answered by reconstructing the trail. Slow, expensive, and incomplete.</p>
+      </div>
+      <div class="card p-6" style="border-color: var(--faa-gray-200);">
+        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Failed AI</div>
+        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.55;">Pilots that look good in a demo and fall apart in production. The agent didn&rsquo;t fail. The inputs did.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 lg:mt-16 max-w-3xl border-l-2 pl-6" style="border-color: var(--faa-blue);">
+      <p style="color: var(--faa-navy); font-size:22px; font-weight:600; line-height:1.35; letter-spacing:-0.01em;">
+        Garbage in, amplified garbage out.
+      </p>
+      <p class="mt-3" style="color: var(--faa-gray-600); font-size:16px; line-height:1.6;">
+        AI doesn&rsquo;t reveal what your data is. It reveals what your data isn&rsquo;t. Every weakness in the foundation gets scaled.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 3. FAA APPROACH                                               -->
+<!-- ============================================================= -->
+<section id="approach" class="bg-white">
+  <div class="container-faa section-y">
+    <div class="max-w-3xl mb-12 lg:mb-16">
+      <div class="eyebrow" style="color: var(--faa-navy);">FAA&rsquo;s Approach</div>
+      <h2 class="h2 mt-3">What We Actually Do.</h2>
+      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        Five components. Each is operator-grade work, not a slide. Each ties to a business outcome leadership can defend. None require a year of platform investment before value shows up.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-12">
+      <div class="flex gap-5">
+        <div class="method-num shrink-0">01</div>
+        <div>
+          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Data Mapping &amp; System Alignment</h3>
+          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Where every operational data point actually lives. Source systems, downstream copies, and the manual transforms in between. The first deliverable is a map of how data really moves &mdash; not how the architecture diagram says it does.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5">
+        <div class="method-num shrink-0">02</div>
+        <div>
+          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Source-of-Truth Identification</h3>
+          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">One version of each metric, definition, and master record &mdash; with named ownership. Revenue. Margin. On-time delivery. Customer. Item. The arguments end here.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5">
+        <div class="method-num shrink-0">03</div>
+        <div>
+          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Data Model Restructuring</h3>
+          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Item, customer, vendor, and transactional masters cleaned, deduplicated, and structured to support real reporting and downstream automation. Practical passes, not platform overhauls.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5">
+        <div class="method-num shrink-0">04</div>
+        <div>
+          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Governance &amp; Ownership Definition</h3>
+          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Who decides what &ldquo;active customer&rdquo; means. Who can change a price master. Who reviews exceptions. Lightweight, enforceable, and built for a team that doesn&rsquo;t have an enterprise data office.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5">
+        <div class="method-num shrink-0">05</div>
+        <div>
+          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Access &amp; Control Design</h3>
+          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Right people see the right data. Audit trail exists. Role-appropriate access for finance, operations, sales, and external auditors. Operational control &mdash; not compliance theater.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 4. WHAT GOOD LOOKS LIKE                                       -->
+<!-- ============================================================= -->
+<section style="background: var(--faa-gray-50);">
+  <div class="container-faa section-y">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+      <div class="lg:col-span-5">
+        <div class="eyebrow" style="color: var(--faa-navy);">End State</div>
+        <h2 class="h2 mt-3">What Good Looks Like.</h2>
+        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+          Not theoretical. Not a multi-year roadmap. The end of Step 01 is a real, defensible operating posture &mdash; and the foundation every later AI investment depends on.
+        </p>
+      </div>
+      <div class="lg:col-span-7">
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li class="flex gap-4 py-4" style="border-bottom: 1px solid var(--faa-gray-200);">
+            <span class="shrink-0 mt-1" style="width:6px;height:6px;border-radius:50%;background: var(--faa-blue);"></span>
+            <span style="color: var(--faa-navy); font-size:16px; line-height:1.55;">One revenue number. One margin number. One on-time delivery rate. Across every system, dashboard, and conversation.</span>
+          </li>
+          <li class="flex gap-4 py-4" style="border-bottom: 1px solid var(--faa-gray-200);">
+            <span class="shrink-0 mt-1" style="width:6px;height:6px;border-radius:50%;background: var(--faa-blue);"></span>
+            <span style="color: var(--faa-navy); font-size:16px; line-height:1.55;">Reports that don&rsquo;t require reconciliation. Close the books on time, every month.</span>
+          </li>
+          <li class="flex gap-4 py-4" style="border-bottom: 1px solid var(--faa-gray-200);">
+            <span class="shrink-0 mt-1" style="width:6px;height:6px;border-radius:50%;background: var(--faa-blue);"></span>
+            <span style="color: var(--faa-navy); font-size:16px; line-height:1.55;">Master data that holds up to a real ERP cleanup pass &mdash; and stays clean because someone owns it.</span>
+          </li>
+          <li class="flex gap-4 py-4" style="border-bottom: 1px solid var(--faa-gray-200);">
+            <span class="shrink-0 mt-1" style="width:6px;height:6px;border-radius:50%;background: var(--faa-blue);"></span>
+            <span style="color: var(--faa-navy); font-size:16px; line-height:1.55;">Clear domain ownership. Finance owns financial masters. Operations owns operational ones. IT supports both.</span>
+          </li>
+          <li class="flex gap-4 py-4" style="border-bottom: 1px solid var(--faa-gray-200);">
+            <span class="shrink-0 mt-1" style="width:6px;height:6px;border-radius:50%;background: var(--faa-blue);"></span>
+            <span style="color: var(--faa-navy); font-size:16px; line-height:1.55;">Decisions made on data, not despite it. Leadership stops debating numbers and starts debating direction.</span>
+          </li>
+          <li class="flex gap-4 py-4">
+            <span class="shrink-0 mt-1" style="width:6px;height:6px;border-radius:50%;background: var(--faa-blue);"></span>
+            <span style="color: var(--faa-navy); font-size:16px; line-height:1.55;">A foundation an AI agent can actually act on &mdash; without inheriting the noise of the systems beneath it.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= -->
+<!-- 5. TRANSITION TO PROCESS OPTIMIZATION                         -->
+<!-- ============================================================= -->
+<section style="background: var(--faa-navy);">
+  <div class="container-faa" style="padding-top:96px; padding-bottom:96px;">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-8">
+        <div class="eyebrow" style="color: rgba(255,255,255,0.7);">Next &mdash; Methodology &middot; 02</div>
+        <h2 class="mt-3" style="color: var(--faa-white); font-size: clamp(28px, 3.4vw, 40px); font-weight:600; line-height:1.18; letter-spacing:-0.015em;">
+          Clean Data Doesn&rsquo;t Fix a Broken Workflow.
+        </h2>
+        <p class="mt-5" style="color: rgba(255,255,255,0.85); font-size:17px; line-height:1.6; max-width: 60ch;">
+          When the data is right, the broken workflows become visible. That&rsquo;s the next problem &mdash; and the next page. Process is where AI gets applied. Not before.
+        </p>
+      </div>
+      <div class="lg:col-span-4 lg:text-right">
+        <a href="/operations/" class="btn btn-outline-white">Continue to Workflow Optimization &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--faa-navy);">
+  <div class="container-faa" style="padding-top:96px; padding-bottom:96px;">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 relative">
+      <div class="lg:pr-12 flex flex-col">
+        <div class="eyebrow" style="color: rgba(255,255,255,0.7);">Start Here</div>
+        <h3 class="mt-3" style="color: var(--faa-white); font-size: 28px; font-weight: 600; line-height: 1.2;">Business Systems Assessment</h3>
+        <p class="mt-5" style="color: rgba(255,255,255,0.85); font-size: 17px; line-height: 1.6; max-width: 50ch;">
+          A focused evaluation of how the business actually operates across data, workflows, and systems. Output: a prioritized execution path tied to measurable business outcomes.
+        </p>
+        <div class="mt-auto pt-8">
+          <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary">Start with a Business Systems Assessment</a>
+        </div>
+      </div>
+      <div class="hidden lg:block absolute left-1/2 top-0 bottom-0" style="width:1px;background: rgba(255,255,255,0.20);"></div>
+      <div class="lg:pl-12 flex flex-col">
+        <div class="eyebrow" style="color: rgba(255,255,255,0.7);">Or Explore</div>
+        <h3 class="mt-3" style="color: var(--faa-white); font-size: 28px; font-weight: 600; line-height: 1.2;">90-Day AI Execution Sprint</h3>
+        <p class="mt-5" style="color: rgba(255,255,255,0.85); font-size: 17px; line-height: 1.6; max-width: 50ch;">
+          A targeted conversation about the 90-Day AI Execution Sprint and the workflow where execution should start.
+        </p>
+        <div class="mt-auto pt-8">
+          <a href="mailto:blueprint@foundationaiadvisory.com?subject=90-Day%20AI%20Execution%20Sprint%20Inquiry" class="btn btn-outline-white">Discuss the 90-Day AI Execution Sprint</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================= -->
+<!-- RELATED INSIGHTS                                              -->
+<!-- ============================================================= -->
+<section class="bg-white border-t" style="border-color: var(--faa-gray-100);">
+  <div class="container-faa section-y">
+    <div class="flex flex-col gap-3 mb-10 lg:mb-12 max-w-3xl">
+      <div class="eyebrow" style="color: var(--faa-navy);">Related Insights</div>
+      <h2 class="h2">Recent Thinking on Data</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="/insights-foundations-data-constraint/" class="card">
+        <div class="card-image">
+          <img src="/assets/insights/foundations-series-01-data-foundation.webp" alt="Layered data foundation underneath a structured operating system" loading="lazy" />
+          <span class="pill">Part 1 of 5</span>
+        </div>
+        <div class="p-6 flex flex-col gap-3 flex-1">
+          <span class="kicker">Foundations Series</span>
+          <h3 style="font-size: 19px; font-weight: 600; line-height: 1.3;">Data: The Constraint You Can&rsquo;t Outrun</h3>
+          <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Why mid-market AI initiatives stall on data quality, ownership, and structure before any model is involved.</p>
+          <span class="read-link mt-auto">Read &rarr;</span>
+        </div>
+      </a>
+
+      <a href="/insights/data-governance-non-enterprise-teams/" class="card">
+        <div class="card-image">
+          <img src="/assets/insights/data-governance-non-enterprise-teams.webp" alt="Infographic explaining lightweight data governance for non-enterprise teams" loading="lazy" />
+          <span class="pill">Infographic</span>
+        </div>
+        <div class="p-6 flex flex-col gap-3 flex-1">
+          <span class="kicker">Data Curation &amp; Governance</span>
+          <h3 style="font-size: 19px; font-weight: 600; line-height: 1.3;">Data Governance for Non-Enterprise Teams</h3>
+          <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">A lightweight, enforceable governance model for mid-market teams that need trusted data without enterprise data-office overhead.</p>
+          <span class="read-link mt-auto">Read &rarr;</span>
+        </div>
+      </a>
+
+      <a href="/insights-foundations-ai-governance/" class="card">
+        <div class="card-image">
+          <img src="/assets/insights/foundations-series-05-governance-system.webp" alt="Governance scaffolding around AI: ownership, controls, escalation, traceability" loading="lazy" />
+          <span class="pill">Part 5 of 5</span>
+        </div>
+        <div class="p-6 flex flex-col gap-3 flex-1">
+          <span class="kicker">Foundations Series</span>
+          <h3 style="font-size: 19px; font-weight: 600; line-height: 1.3;">Governance: The System That Holds It Together</h3>
+          <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Lightweight governance for mid-market AI: ownership, controls, escalation paths, and human oversight at the right points.</p>
+          <span class="read-link mt-auto">Read &rarr;</span>
+        </div>
+      </a>
+    </div>
+    <div class="mt-10">
+      <a href="/insights/" class="read-link">View all insights&nbsp;<span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--faa-gray-50);">
+  <div class="container-faa" style="padding-top:64px; padding-bottom:64px;">
+    <div class="text-center mx-auto" style="max-width: 640px;">
+      <h3 style="color: var(--faa-navy); font-size: 24px; font-weight: 600; line-height: 1.3;">Get FAA&rsquo;s running record on mid-market AI execution.</h3>
+      <p class="mt-3" style="color: var(--faa-gray-600); font-size: 16px; line-height: 1.6;">
+        Insight assets for mid-market operators. Published when there is something worth publishing.
+      </p>
+      <form class="mt-7 flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center" data-subscribe-form>
+        <label for="subscribe-email" class="sr-only">Email address</label>
+        <input id="subscribe-email" type="email" placeholder="you@company.com" required
+          class="bg-white"
+          style="height:44px; padding: 0 14px; border:1px solid var(--faa-gray-200); border-radius:4px; font-size:15px; color: var(--faa-gray-600); width:100%; max-width: 380px;" />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="mt-4" style="color: var(--faa-gray-400); font-size: 13px;">
+        We do not share your information. Unsubscribe any time.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer style="background: var(--faa-navy);">
+  <div class="container-faa" style="padding-top:48px; padding-bottom:48px;">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+      <div class="flex items-center gap-4" style="color: var(--faa-white);">
+        <img src="/assets/global-footer-logo-wordmark.png" alt="Foundation AI Advisory" style="height:32px;width:auto;display:block;opacity:0.95;" />
+        <span style="color: rgba(255,255,255,0.6); font-size: 13px;">&copy; 2026 Foundation AI Advisory. All rights reserved.</span>
+      </div>
+      <nav aria-label="Legal" class="flex flex-wrap items-center gap-6">
+        <a href="/privacy-policy/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Privacy</a>
+        <a href="/terms/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Terms</a>
+        <a href="/contact/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Contact</a>
+        <a href="https://www.linkedin.com/company/foundation-ai-advisory" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Foundation AI Advisory on LinkedIn" style="font-size: 13px;">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.94 8.98H3.72v10.54h3.22V8.98zM5.33 7.52c1.03 0 1.86-.84 1.86-1.86S6.36 3.8 5.33 3.8s-1.86.84-1.86 1.86.83 1.86 1.86 1.86zM20.53 13.56c0-3.03-1.62-4.44-3.78-4.44-1.74 0-2.52.96-2.95 1.63V8.98h-3.08c.04.99 0 10.54 0 10.54h3.21v-5.89c0-.31.02-.63.12-.85.26-.63.86-1.28 1.86-1.28 1.31 0 1.84.99 1.84 2.45v5.57h3.22l.01-5.96z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="/nav.js" defer></script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
