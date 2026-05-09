@@ -11,7 +11,7 @@ A static HTML/CSS/JS site for Foundation AI Advisory, LLC — a business-first A
 This is a static site. The only dev dependency is Node.js (any modern LTS).
 
 ```bash
-node server.js
+node scripts/server.js
 ```
 
 Then open <http://localhost:8000>.
@@ -21,7 +21,7 @@ The local server adds `.html` to extensionless URLs and serves `404.html` on fil
 To change the port:
 
 ```bash
-PORT=3000 node server.js
+PORT=3000 node scripts/server.js
 ```
 
 ---
@@ -42,7 +42,7 @@ PORT=3000 node server.js
 ├── insight-detail.js            # Loads /content/insights/<slug>.md into insight pages
 ├── foundations-series.js        # Renders the 5-part Foundations field series
 ├── cookie-consent.js            # Cookie banner + consent persistence
-├── server.js                    # Local dev server only
+├── scripts/server.js            # Local dev server only
 ├── robots.txt                   # Crawler directives (allows AI/answer engines for AEO)
 ├── sitemap.xml                  # SEO sitemap
 └── llms.txt                     # AEO-friendly summary for LLM answer engines
