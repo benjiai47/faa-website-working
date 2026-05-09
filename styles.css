@@ -1129,8 +1129,14 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   display: block;
   width: 100%;
   height: auto;
+  max-height: 460px;
+  object-fit: cover;
+  object-position: center center;
   will-change: transform;
   animation: foundationsHubImageDrift 30s ease-in-out infinite alternate;
+}
+@media (max-width: 767px) {
+  .foundations-hub-image { max-height: 260px; }
 }
 @keyframes foundationsHubImageDrift {
   0%   { transform: scale(1.00); }
