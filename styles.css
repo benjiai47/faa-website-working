@@ -1549,6 +1549,45 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   font-style: italic;
 }
 
+/* "Where AI Can Create Value" use-case block — sits inside the Executive
+   Answer left column on industry pages between body copy and CTA. */
+.aeo-usecases {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--faa-gray-100);
+}
+.aeo-usecases .kicker {
+  display: block;
+  margin-bottom: 14px;
+}
+.aeo-usecase-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 640px) {
+  .aeo-usecase-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.aeo-usecase-list li {
+  position: relative;
+  padding: 4px 0 4px 18px;
+  color: var(--faa-gray-600);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.aeo-usecase-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 1px;
+  background: var(--faa-blue);
+}
+
 /* Industry tile with background image (homepage "By Industry" grid). */
 .industry-card {
   position: relative;
