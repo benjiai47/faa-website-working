@@ -2047,12 +2047,20 @@ a:focus-visible, button:focus-visible, input:focus-visible {
    max() term collapses to 0 and the block sits inside the container's
    left padding, which renders the same way. */
 .methodology-hero .hero-text-block {
-  width: clamp(420px, 38vw, 540px);
+  /* Mobile/tablet: fill the container's content width (which already has
+     left/right padding from .container-faa). The previous clamp floor of
+     420px was wider than common phone viewports (320-414px), causing
+     horizontal overflow that .page-hero { overflow: hidden } then clipped
+     — visible as the headline being cut off on the right edge of mobile
+     screens. width: 100% + max-width: 540px keeps the block inside the
+     container at every breakpoint. */
+  width: 100%;
   max-width: 540px;
   margin-left: 0;
 }
 @media (min-width: 1024px) {
   .methodology-hero .hero-text-block {
+    width: 540px;
     margin-left: calc(7vw - 48px - max(0px, (100vw - 1280px) / 2));
   }
 }
