@@ -1969,6 +1969,23 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .page-hero-content { padding-top: 120px; padding-bottom: 120px; }
 }
 
+/* Foundation methodology page hero — ships with one more dek paragraph
+   and one more CTA button than operations.html and agentic-ai.html.
+   Compress vertical padding + the gap between consecutive dek paragraphs
+   so the methodology pages feel like the same family. Scoped strictly
+   to body#page-foundation; unrelated page types are untouched. */
+body#page-foundation .page-hero-content {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+@media (min-width: 1024px) {
+  body#page-foundation .page-hero-content {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+}
+body#page-foundation .hero-dek + .hero-dek { margin-top: 10px; }
+
 /* ─── Header layout: tighten whenever the primary nav is visible ─── */
 /* Below xl (1280px) the nav is hidden and the button has the row to
    itself — no override needed. Once the nav appears, the full row
