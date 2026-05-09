@@ -1539,6 +1539,15 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   font-size: 15px;
   font-weight: 600;
 }
+.methodology-aeo .aeo-closing {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--faa-gray-100);
+  color: var(--faa-gray-600);
+  font-size: 14px;
+  line-height: 1.55;
+  font-style: italic;
+}
 
 /* Industry tile with background image (homepage "By Industry" grid). */
 .industry-card {
