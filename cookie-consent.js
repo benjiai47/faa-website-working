@@ -1,6 +1,9 @@
 (function() {
   const STORAGE_KEY = 'faa_cookie_consent_v1';
-  const GA_MEASUREMENT_ID = window.FAA_GA_MEASUREMENT_ID || '';
+  // GA4 Measurement ID for the Foundation AI Advisory property. Can still be
+  // overridden per-page by setting window.FAA_GA_MEASUREMENT_ID before this
+  // script loads (e.g., for a staging property), but defaults to production.
+  const GA_MEASUREMENT_ID = window.FAA_GA_MEASUREMENT_ID || 'G-PRY2NSQLC5';
 
   function readConsent() {
     try {
@@ -35,6 +38,92 @@
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_MEASUREMENT_ID);
     document.head.appendChild(script);
+
+    attachEventTracking();
+  }
+
+  // Lightweight click/submit tracking. Only attaches once gtag is loaded.
+  // Captures: mailto clicks (email_click), outbound HTTP links
+  // (outbound_link_click), primary CTA buttons (cta_click), subscribe form
+  // submissions (subscribe_submit).
+  function attachEventTracking() {
+    if (window.faaEventsAttached) return;
+    window.faaEventsAttached = true;
+
+    const sendEvent = (name, params) => {
+      try { window.gtag('event', name, params || {}); } catch (e) { /* swallow */ }
+    };
+
+    const isExternal = (url) => {
+      try {
+        const u = new URL(url, window.location.href);
+        return u.host && u.host !== window.location.host && /^https?:$/.test(u.protocol);
+      } catch { return false; }
+    };
+
+    document.addEventListener('click', (event) => {
+      const a = event.target.closest('a');
+      if (!a) {
+        // Track .btn-primary clicks even when they aren't <a> tags (rare).
+        const btn = event.target.closest('.btn-primary');
+        if (btn) {
+          sendEvent('cta_click', {
+            link_text: (btn.textContent || '').trim().slice(0, 100),
+            page_path: window.location.pathname,
+            page_title: document.title,
+            cta_location: btn.closest('section') ? (btn.closest('section').id || 'unknown') : 'unknown',
+          });
+        }
+        return;
+      }
+
+      const href = a.getAttribute('href') || '';
+      const linkText = (a.textContent || '').trim().slice(0, 100);
+
+      // Mailto -> email_click
+      if (href.indexOf('mailto:') === 0) {
+        sendEvent('email_click', {
+          link_url: href,
+          link_text: linkText,
+          page_path: window.location.pathname,
+          page_title: document.title,
+        });
+      }
+      // External http(s) link -> outbound_link_click
+      else if (isExternal(href)) {
+        sendEvent('outbound_link_click', {
+          link_url: href,
+          link_text: linkText,
+          page_path: window.location.pathname,
+          page_title: document.title,
+        });
+      }
+
+      // Primary CTA (Business Systems Assessment buttons, etc.) -> cta_click.
+      // Sent in addition to email_click when the CTA is a mailto button —
+      // gives a clean primary-conversion-intent count distinct from raw
+      // mailto clicks elsewhere on the page.
+      if (a.classList && a.classList.contains('btn-primary')) {
+        sendEvent('cta_click', {
+          link_text: linkText,
+          link_url: href,
+          page_path: window.location.pathname,
+          page_title: document.title,
+          cta_location: a.closest('section') ? (a.closest('section').id || 'unknown') : 'unknown',
+        });
+      }
+    }, true);
+
+    // Subscribe form submissions -> subscribe_submit
+    document.addEventListener('submit', (event) => {
+      const form = event.target;
+      if (form && form.hasAttribute && form.hasAttribute('data-subscribe-form')) {
+        sendEvent('subscribe_submit', {
+          page_path: window.location.pathname,
+          page_title: document.title,
+        });
+      }
+    }, true);
   }
 
   function removeBanner(root) {
