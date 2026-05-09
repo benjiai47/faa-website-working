@@ -1437,6 +1437,77 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
+/* Methodology section — two-column intro layout (narrative + AEO panel) */
+.methodology-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+@media (min-width: 1024px) {
+  .methodology-intro-grid {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    gap: 72px;
+    align-items: start;
+  }
+}
+.methodology-intro-text { max-width: 720px; }
+.methodology-aeo {
+  border-left: 2px solid var(--faa-blue);
+  padding: 4px 0 4px 28px;
+  /* Sticky so the answer panel stays in view while the user reads down
+     the longer left-column narrative. */
+  position: sticky;
+  top: 116px;
+}
+@media (max-width: 1023px) {
+  .methodology-aeo {
+    position: static;
+    border-left: 0;
+    border-top: 2px solid var(--faa-blue);
+    padding: 28px 0 0;
+  }
+}
+.methodology-aeo .aeo-heading {
+  color: var(--faa-navy);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin-top: 12px;
+}
+.methodology-aeo .aeo-lede {
+  color: var(--faa-gray-600);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+.methodology-aeo .aeo-faq {
+  margin: 28px 0 0;
+}
+.methodology-aeo .aeo-faq-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--faa-gray-100);
+}
+.methodology-aeo .aeo-faq-item:last-of-type { border-bottom: 0; padding-bottom: 8px; }
+.methodology-aeo dt {
+  color: var(--faa-navy);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.methodology-aeo dd {
+  margin: 8px 0 0;
+  color: var(--faa-gray-600);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.methodology-aeo .aeo-cta {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
 /* Industry tile with background image (homepage "By Industry" grid). */
 .industry-card {
   position: relative;
