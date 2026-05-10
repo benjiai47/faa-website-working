@@ -42,3 +42,8 @@ _*.sh
 squoosh-queue/
 squoosh-out/
 assets/_originals/
+
+# Article working folders / draft source material — never publish
+assets/insights/claude copy for article/
+assets/**/_drafts/
+*.md.draft
