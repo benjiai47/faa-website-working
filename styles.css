@@ -2281,6 +2281,48 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   color: var(--faa-navy);
 }
 
+/* Foundation page hero: the data-curation source image carries its
+   visual weight on the right (the layered data architecture grid),
+   which leaves the left zone of the hero as the natural place for
+   copy. This modifier centers the .hero-text-block horizontally
+   within the left ~40% of the viewport instead of the standard
+   methodology-hero left-aligned placement, so the text reads as a
+   contained editorial column rather than a left-anchored block.
+   Vertical centering is already handled by .methodology-hero's
+   flex / justify-content: center / min-height: 800px. */
+
+@media (min-width: 1440px) {
+  .foundation-hero .hero-text-block {
+    /* Center a 540px text column inside the left 40vw of the viewport.
+       Math: target left edge in viewport coords = (40vw - 540px) / 2.
+       The text block lives inside .container-faa (centered, max-width
+       1280px), so the negative margin escapes the container leftward.
+         text-block left  = container-content-left + margin-left
+         (20vw - 270)     = ((100vw - 1280)/2 + 24) + margin-left
+         margin-left      = -30vw + 346px
+       Verified at 1440 / 1920 / 2560 — text always centers in left
+       40vw with a 540px column. Falls back to the standard
+       methodology-hero placement at <1440 because below that the left
+       40vw is too narrow to hold a 540px column without clipping. */
+    width: 540px;
+    max-width: 540px;
+    margin-left: calc(-30vw + 346px);
+  }
+}
+
+.foundation-hero .page-hero-overlay {
+  /* Strengthen the navy on the left where copy now sits and let the
+     right open up so the data architecture grid still reads as the
+     primary imagery. */
+  background:
+    linear-gradient(90deg,
+      rgba(8,18,36,0.94) 0%,
+      rgba(8,18,36,0.88) 30%,
+      rgba(8,18,36,0.55) 50%,
+      rgba(8,18,36,0.25) 80%,
+      rgba(8,18,36,0.15) 100%);
+}
+
 .applied-ai-hero {
   position: relative;
   overflow: hidden;
