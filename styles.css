@@ -2106,30 +2106,46 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   background-color: var(--faa-navy-deep);
 }
 .industry-hero .page-hero-image {
-  /* Mild desaturation only — keeps the 10 industry photos reading as a
-     unified family without dimming them so heavily that they disappear
-     under the overlay. No brightness clamp; the gradient does the
-     darkening on the text side. */
+  /* Constrain the image element to the right ~55% of the hero instead
+     of full-bleed. With background-size: cover and the source images
+     being roughly square (~1:1), filling the full ~3:1 hero width
+     forces a heavy top/bottom crop — only the middle ~40% of each
+     source image showed. Anchoring the image to a narrower right-side
+     zone gives cover a less-wide box to fill, so the vertical crop
+     drops to ~10% top + ~10% bottom — i.e., the middle ~80% of the
+     source composition shows, matching the homepage card content. The
+     left half of the hero stays solid navy for the headline. */
+  inset: 0 0 0 auto;
+  width: 55%;
   filter: saturate(0.85);
 }
+@media (max-width: 1023px) {
+  /* Tablet: image takes more of the hero width since the viewport is
+     narrower; cover-cropping behavior stays gentle because the box
+     aspect is closer to the source's 1:1. */
+  .industry-hero .page-hero-image {
+    width: 70%;
+  }
+}
 .industry-hero .page-hero-overlay {
-  /* Single horizontal navy gradient: heavy on the left so the hero copy
-     is fully legible, light on the right so the industry image is
-     clearly visible. No stacked vertical overlay — that combination
-     pushed the right side past ~85% obscured and left the hero
-     reading as solid navy. */
+  /* Heavy navy on the left text zone, sharp transition at the image
+     boundary (~45%), then light over the image so the right side
+     reads as a real photograph, not a tinted wash. */
   background:
     linear-gradient(90deg,
-      rgba(8,18,36,0.92) 0%,
-      rgba(8,18,36,0.78) 38%,
-      rgba(8,18,36,0.40) 70%,
-      rgba(8,18,36,0.18) 100%);
+      rgba(8,18,36,0.94) 0%,
+      rgba(8,18,36,0.88) 40%,
+      rgba(8,18,36,0.45) 50%,
+      rgba(8,18,36,0.20) 70%,
+      rgba(8,18,36,0.08) 100%);
 }
 @media (max-width: 767px) {
-  /* Mobile: pull the image focal point off-center and use a top-down
-     darken concentrated where the copy sits, fading toward the bottom
-     so the image still reads underneath the CTA. */
+  /* Mobile: viewport is too narrow for a side-by-side composition;
+     restore full-bleed cover and use a top-down navy darken so the
+     copy zone stays legible while the image fills the whole hero. */
   .industry-hero .page-hero-image {
+    inset: 0;
+    width: auto;
     background-position: 70% center;
   }
   .industry-hero .page-hero-overlay {
