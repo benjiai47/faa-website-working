@@ -1041,6 +1041,18 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   font-weight: 700;
 }
 
+/* Optional editorial byline directly under an insight's H1 in the
+   hero. Quiet, restrained — sits between the title and the excerpt
+   without competing with either. Only used when an article has a
+   named author; existing insights without an explicit byline are
+   unaffected. */
+.insight-detail-byline {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
 /* Inline FAQ block at the end of a long-form insight article. Reuses
    the article body's color/size language so it reads as part of the
    piece, not a separate widget — but uses semantic <dl><dt><dd> so
