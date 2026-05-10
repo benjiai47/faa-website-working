@@ -572,6 +572,15 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   letter-spacing: -0.01em;
   margin-bottom: 24px;
 }
+.mega-menu h4 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease-out;
+}
+.mega-menu h4 a:hover,
+.mega-menu h4 a:focus-visible {
+  color: var(--faa-blue);
+}
 .mega-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
