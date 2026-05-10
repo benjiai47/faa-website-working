@@ -2106,36 +2106,38 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   background-color: var(--faa-navy-deep);
 }
 .industry-hero .page-hero-image {
-  /* Slight desaturation + brightness clamp keeps each industry image
-     reading as a unified family across the 10 pages, even though the
-     source photos vary in tone. Pure CSS — no edited image files. */
-  filter: saturate(0.78) brightness(0.92);
+  /* Mild desaturation only — keeps the 10 industry photos reading as a
+     unified family without dimming them so heavily that they disappear
+     under the overlay. No brightness clamp; the gradient does the
+     darkening on the text side. */
+  filter: saturate(0.85);
 }
 .industry-hero .page-hero-overlay {
+  /* Single horizontal navy gradient: heavy on the left so the hero copy
+     is fully legible, light on the right so the industry image is
+     clearly visible. No stacked vertical overlay — that combination
+     pushed the right side past ~85% obscured and left the hero
+     reading as solid navy. */
   background:
     linear-gradient(90deg,
-      rgba(8,18,36,0.94) 0%,
-      rgba(8,18,36,0.86) 42%,
-      rgba(8,18,36,0.68) 100%),
-    linear-gradient(180deg,
-      rgba(8,18,36,0.30) 0%,
-      rgba(8,18,36,0.55) 60%,
-      rgba(8,18,36,0.90) 100%);
+      rgba(8,18,36,0.92) 0%,
+      rgba(8,18,36,0.78) 38%,
+      rgba(8,18,36,0.40) 70%,
+      rgba(8,18,36,0.18) 100%);
 }
 @media (max-width: 767px) {
-  /* Mobile: tighten the left-side darken so headlines, deks, and CTAs
-     stay legible when the image crops to a narrower portion of the
-     composition. */
+  /* Mobile: pull the image focal point off-center and use a top-down
+     darken concentrated where the copy sits, fading toward the bottom
+     so the image still reads underneath the CTA. */
+  .industry-hero .page-hero-image {
+    background-position: 70% center;
+  }
   .industry-hero .page-hero-overlay {
     background:
       linear-gradient(180deg,
-        rgba(8,18,36,0.78) 0%,
-        rgba(8,18,36,0.86) 60%,
-        rgba(8,18,36,0.94) 100%),
-      linear-gradient(90deg,
-        rgba(8,18,36,0.78) 0%,
-        rgba(8,18,36,0.62) 60%,
-        rgba(8,18,36,0.50) 100%);
+        rgba(8,18,36,0.86) 0%,
+        rgba(8,18,36,0.72) 55%,
+        rgba(8,18,36,0.45) 100%);
   }
 }
 
