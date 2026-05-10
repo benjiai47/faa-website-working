@@ -2180,6 +2180,89 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
+/* AI Decision Questions page — primary-content Q&A treatment.
+   Reuses the FAQ <dl>/<dt>/<dd> semantics already used by the
+   methodology AEO panel, but at body-text scale and full-content
+   width so 20 Q&A pairs read as an editorial document, not a sidebar.
+   Also includes a horizontal section index that sits between the intro
+   and the first question group. */
+.decisions-index {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+}
+.decisions-index-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faa-navy);
+}
+.decisions-index a {
+  font-size: 14px;
+  color: var(--faa-gray-600);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 180ms ease-out, border-color 180ms ease-out;
+}
+.decisions-index a:hover,
+.decisions-index a:focus-visible {
+  color: var(--faa-navy);
+  border-bottom-color: var(--faa-blue);
+}
+.decisions-group {
+  max-width: 880px;
+}
+.decisions-group-header {
+  margin-bottom: 36px;
+}
+@media (min-width: 1024px) {
+  .decisions-group-header { margin-bottom: 48px; }
+}
+.decisions-faq {
+  margin: 0;
+  border-top: 1px solid var(--faa-gray-200);
+}
+.decisions-faq-item {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--faa-gray-100);
+}
+@media (min-width: 1024px) {
+  .decisions-faq-item { padding: 32px 0; }
+}
+.decisions-faq dt {
+  color: var(--faa-navy);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.35;
+}
+@media (min-width: 1024px) {
+  .decisions-faq dt { font-size: 21px; }
+}
+.decisions-faq dd {
+  margin: 14px 0 0;
+  color: var(--faa-gray-600);
+  font-size: 16px;
+  line-height: 1.65;
+}
+.decisions-faq dd p {
+  margin: 0 0 12px;
+}
+.decisions-faq dd p:last-child {
+  margin-bottom: 0;
+}
+.decisions-faq dd a {
+  color: var(--faa-blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.decisions-faq dd a:hover {
+  color: var(--faa-navy);
+}
+
 .applied-ai-hero {
   position: relative;
   overflow: hidden;
