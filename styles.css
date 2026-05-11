@@ -923,35 +923,38 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   content: "";
   position: absolute;
   inset: 0;
-  /* Wash concentrated in the bottom ~35% of the tile where the
-     content block lives. Above that the image reads clearly. */
+  /* Wash extended into the lower-middle so the content block (which
+     now starts at ~52% from the top of the card) sits on a strong
+     white backdrop. Above ~55% the image reads clearly. */
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.94) 0%,
-    rgba(255, 255, 255, 0.88) 22%,
-    rgba(255, 255, 255, 0.42) 48%,
-    rgba(255, 255, 255, 0.08) 72%,
+    rgba(255, 255, 255, 0.90) 40%,
+    rgba(255, 255, 255, 0.72) 55%,
+    rgba(255, 255, 255, 0.20) 75%,
     rgba(255, 255, 255, 0.00) 100%
   );
 }
-/* Content block pinned to the bottom of the tile so the image
-   reveals more of itself at the top. Typography sized down from
-   the earlier +47% bump so the content footprint shrinks and the
-   image breathes — hierarchy now comes from size/weight contrast,
-   not from filling half the tile. */
+/* Content block pinned at a fixed offset from the TOP of the tile
+   so the step number (01/02/03), title, dek, and copy on all three
+   cards line up at exactly the same Y. The image still reveals
+   itself in the upper ~52% of each card; the lower half carries
+   the wash + content. A previous bottom-anchored variant let
+   subtle content-height differences misalign the numbers. */
 .mega-pillar-card__content {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 52%;
+  bottom: auto;
   z-index: 2;
-  padding: 24px 28px 24px;
+  padding: 0 28px 24px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 @media (min-width: 1280px) {
-  .mega-pillar-card__content { padding: 28px 36px 28px; gap: 10px; }
+  .mega-pillar-card__content { padding: 0 36px 28px; gap: 10px; }
 }
 .mega-pillar-card__num {
   display: inline-block;
