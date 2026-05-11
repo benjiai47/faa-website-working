@@ -27,14 +27,17 @@
     // understand the sub-items belong together — but they remain
     // direct links to each individual page.
     panel.innerHTML = [
+      '<a href="/">Home</a>',
       '<div class="mobile-menu-section">',
       '  <span class="mobile-menu-label">Methodology</span>',
+      '  <a href="/methodology/">View Methodology Overview</a>',
       '  <a href="/foundation/">Data Curation &amp; Governance</a>',
       '  <a href="/operations/">Workflow Optimization</a>',
       '  <a href="/agentic-ai/">AI Design &amp; Implementation</a>',
       '</div>',
       '<div class="mobile-menu-section">',
       '  <span class="mobile-menu-label">AI Training</span>',
+      '  <a href="/ai-training-workforce-development/">View AI Training Overview</a>',
       '  <a href="/ai-training-workforce-development/#ai-bootcamp">AI Training Bootcamp</a>',
       '  <a href="/ai-training-workforce-development/#workforce-development">AI Workforce Development</a>',
       '</div>',
@@ -158,6 +161,12 @@
     trigger.addEventListener('mouseenter', () => openMenu(id));
     trigger.addEventListener('focus', () => openMenu(id));
     trigger.addEventListener('click', (e) => {
+      // If the trigger is an anchor with a real href, let the
+      // click navigate to the topic landing page. Hover/focus is
+      // already handling dropdown open/close, so we don't need
+      // the legacy click-toggle behavior on links.
+      const href = trigger.tagName === 'A' ? trigger.getAttribute('href') : null;
+      if (href && href !== '#') return; // allow default navigation
       e.preventDefault();
       if (openId === id) closeMenu(true); else openMenu(id);
     });
