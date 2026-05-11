@@ -3043,15 +3043,20 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   background-color: var(--faa-navy-deep);
 }
 .about-hero .page-hero-overlay {
+  /* Lightened: left zone still holds enough navy for the white
+     headline to read (~78–82%), middle transitions through, right
+     zone opens up so the skyline shows in near-natural color.
+     Vertical wash softened so the lower half of the image keeps
+     its lights/reflections instead of fading into navy. */
   background:
     linear-gradient(90deg,
-      rgba(8,18,36,0.96) 0%,
-      rgba(8,18,36,0.88) 42%,
-      rgba(8,18,36,0.55) 100%),
+      rgba(8,18,36,0.82) 0%,
+      rgba(8,18,36,0.62) 42%,
+      rgba(8,18,36,0.20) 100%),
     linear-gradient(180deg,
-      rgba(8,18,36,0.10) 0%,
-      rgba(8,18,36,0.30) 65%,
-      rgba(8,18,36,0.70) 100%);
+      rgba(8,18,36,0.04) 0%,
+      rgba(8,18,36,0.14) 65%,
+      rgba(8,18,36,0.40) 100%);
 }
 @media (max-width: 767px) {
   /* Mobile: skyline crops aggressively at the right edge; pull the
@@ -3061,15 +3066,20 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     background-position: 75% center;
   }
   .about-hero .page-hero-overlay {
+    /* Mobile: text sits over the full width of the image since the
+       hero stacks vertically. Keep a moderate wash everywhere
+       (rather than the previous near-opaque 82–94%) so the skyline
+       still reads as imagery. The lower-half wash protects the
+       body copy from getting lost in the city lights. */
     background:
       linear-gradient(180deg,
-        rgba(8,18,36,0.82) 0%,
-        rgba(8,18,36,0.88) 55%,
-        rgba(8,18,36,0.94) 100%),
+        rgba(8,18,36,0.62) 0%,
+        rgba(8,18,36,0.70) 55%,
+        rgba(8,18,36,0.80) 100%),
       linear-gradient(90deg,
-        rgba(8,18,36,0.78) 0%,
-        rgba(8,18,36,0.70) 60%,
-        rgba(8,18,36,0.60) 100%);
+        rgba(8,18,36,0.55) 0%,
+        rgba(8,18,36,0.48) 60%,
+        rgba(8,18,36,0.40) 100%);
   }
 }
 
