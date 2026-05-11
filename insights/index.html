@@ -503,15 +503,34 @@
       group.forEach(c => c.classList.toggle('is-active', c.getAttribute(c === chipsTopic[0] || group === chipsTopic ? 'data-topic' : 'data-format') === value));
     }
 
+    // Keep the URL in sync with the current chip selection so the back
+    // button and a browser refresh preserve what the user is looking at.
+    // Without this, a user who landed via /insights/?format=article and
+    // then clicked "All" would still have ?format=article in the URL,
+    // and a refresh would silently re-apply the article filter.
+    function syncURL() {
+      const params = new URLSearchParams(location.search);
+      if (state.topic === 'all') params.delete('topic'); else params.set('topic', state.topic);
+      if (state.format === 'all') params.delete('format'); else params.set('format', state.format);
+      const query = params.toString();
+      const newURL = location.pathname + (query ? '?' + query : '') + location.hash;
+      // replaceState avoids polluting the browser history with one entry
+      // per chip click — back button still returns the user to the
+      // page they came from.
+      history.replaceState(null, '', newURL);
+    }
+
     chipsTopic.forEach(chip => chip.addEventListener('click', () => {
       chipsTopic.forEach(c => c.classList.toggle('is-active', c === chip));
       state.topic = chip.getAttribute('data-topic');
       render();
+      syncURL();
     }));
     chipsFormat.forEach(chip => chip.addEventListener('click', () => {
       chipsFormat.forEach(c => c.classList.toggle('is-active', c === chip));
       state.format = chip.getAttribute('data-format');
       render();
+      syncURL();
     }));
 
     // URL param hydration: ?format=brief or ?topic=data
