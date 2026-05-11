@@ -1006,6 +1006,125 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 }
 
 /* ─────────────────────────────────────────────────────────────────
+   AI Training mega-menu — image-backed card variant.
+   Same visual language as the Methodology pillar cards (image
+   bleeding to the bottom under a soft white wash, content sitting
+   on top) but two columns instead of three, so each card is wider
+   relative to its height. Used only by the AI Training dropdown.
+───────────────────────────────────────────────────────────────── */
+.mega-ai-training-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .mega-ai-training-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    border: 1px solid var(--faa-gray-100);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--faa-white);
+  }
+}
+.mega-ai-training-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  min-height: 380px;
+  text-decoration: none;
+  background: var(--faa-white);
+  transition: transform 220ms ease-out;
+  isolation: isolate;
+}
+@media (min-width: 1280px) {
+  .mega-ai-training-card { min-height: 420px; }
+}
+@media (min-width: 1536px) {
+  .mega-ai-training-card { min-height: 460px; }
+}
+@media (min-width: 768px) {
+  .mega-ai-training-card + .mega-ai-training-card {
+    border-left: 1px solid var(--faa-gray-100);
+  }
+}
+.mega-ai-training-card__image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 600ms ease-out;
+}
+.mega-ai-training-card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 255, 255, 0.94) 38%,
+    rgba(255, 255, 255, 0.62) 68%,
+    rgba(255, 255, 255, 0.12) 100%
+  );
+}
+.mega-ai-training-card__content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media (min-width: 1280px) {
+  .mega-ai-training-card__content { padding: 40px 44px 32px; }
+}
+.mega-ai-training-card__num {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faa-blue);
+}
+.mega-ai-training-card__title {
+  margin: 0;
+  color: var(--faa-navy);
+  font-size: clamp(26px, 1.9vw, 34px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  transition: color 200ms ease-out;
+}
+.mega-ai-training-card__dek {
+  margin: 0;
+  max-width: 44ch;
+  color: var(--faa-gray-700);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+.mega-ai-training-card:hover .mega-ai-training-card__title,
+.mega-ai-training-card:focus-visible .mega-ai-training-card__title {
+  color: var(--faa-blue);
+}
+.mega-ai-training-card:hover .mega-ai-training-card__image,
+.mega-ai-training-card:focus-visible .mega-ai-training-card__image {
+  transform: scale(1.03);
+}
+.mega-ai-training-card:focus-visible {
+  outline: 2px solid var(--faa-blue);
+  outline-offset: -2px;
+}
+.mega-ai-training-card--bootcamp .mega-ai-training-card__image {
+  background-image: url('/assets/navigation/ai-training/ai-training-bootcamp.webp');
+}
+.mega-ai-training-card--workforce .mega-ai-training-card__image {
+  background-image: url('/assets/navigation/ai-training/ai-training-workforce-development.webp');
+}
+
+/* ─────────────────────────────────────────────────────────────────
    Industries mega-menu — image-backed tile grid.
    Replaces the previous .mega-grid / .mega-link text-only layout.
    Reuses the homepage industry card .webp images as faint
