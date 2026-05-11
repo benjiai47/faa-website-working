@@ -618,6 +618,12 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   display: grid;
 }
 .mobile-menu-panel a {
+  /* Explicit block so anchors nested inside .mobile-menu-section
+     (Methodology + AI Training groups) stack vertically. Top-level
+     panel anchors already behaved block-like because the panel is
+     a grid container, but section-nested anchors are inline by
+     default and were running together on one line. */
+  display: block;
   color: var(--faa-navy);
   font-size: 16px;
   font-weight: 500;
@@ -625,6 +631,17 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   border-bottom: 1px solid var(--faa-gray-100);
 }
 .mobile-menu-panel a:last-child {
+  border-bottom: 0;
+}
+/* Inside a section group (Methodology / AI Training), every nested
+   link should have its own bottom divider — the :last-child rule
+   above otherwise drops the divider on the last anchor of each
+   section, which made the boundary between Methodology and AI
+   Training look uneven. */
+.mobile-menu-section a {
+  border-bottom: 1px solid var(--faa-gray-100);
+}
+.mobile-menu-section a:last-child {
   border-bottom: 0;
 }
 .mobile-menu-panel .mobile-menu-cta {
