@@ -2505,6 +2505,73 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
+/* Mobile only: apply the Methodology mega-menu pillar images as
+   faint card backgrounds so the homepage pillars feel continuous
+   with the dropdown. White wash matches the mega-menu treatment
+   so text stays dark and readable. Hides the stacked visual below
+   the body since it would now duplicate the same image. Desktop
+   and tablet (≥768px) are untouched. */
+@media (max-width: 767px) {
+  .pillar-card--data,
+  .pillar-card--workflow,
+  .pillar-card--ai {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    isolation: isolate;
+  }
+  .pillar-card--data {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.94) 0%,
+        rgba(255, 255, 255, 0.88) 100%
+      ),
+      url('/assets/navigation/methodology/methodology-data-curation-governance.webp');
+  }
+  .pillar-card--workflow {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.94) 0%,
+        rgba(255, 255, 255, 0.88) 100%
+      ),
+      url('/assets/navigation/methodology/methodology-workflow-optimization.webp');
+  }
+  .pillar-card--ai {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.94) 0%,
+        rgba(255, 255, 255, 0.88) 100%
+      ),
+      url('/assets/navigation/methodology/methodology-ai-design-implementation.webp');
+  }
+  /* Pillar number rail: keep its top/bottom rhythm but make the
+     fill translucent so the image shows through subtly. */
+  .pillar-card--data .pillar-card-num,
+  .pillar-card--workflow .pillar-card-num,
+  .pillar-card--ai .pillar-card-num {
+    background: rgba(255, 255, 255, 0.32);
+    border-right-color: rgba(15, 23, 42, 0.08);
+  }
+  /* Stacked visual at the bottom is now redundant with the card
+     background — hide it on phones only. */
+  .pillar-card--data .pillar-card-visual,
+  .pillar-card--workflow .pillar-card-visual,
+  .pillar-card--ai .pillar-card-visual {
+    display: none;
+  }
+  /* Hover effect would invert the wash unpleasantly on touch
+     devices — keep the wash steady on tap. */
+  .pillar-card--data:hover,
+  .pillar-card--workflow:hover,
+  .pillar-card--ai:hover {
+    background-color: transparent;
+  }
+}
+
 /* Simple page hero (non-carousel) */
 .page-hero {
   position: relative;
