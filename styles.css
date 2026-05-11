@@ -943,6 +943,24 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   font-size: 14px;
   line-height: 1.5;
 }
+/* Secondary explanatory sentence: quieter than the dek, slightly
+   smaller, capped width so each card's copy block doesn't push down
+   into the image area. Hidden on narrow viewports where the cards
+   collapse into a vertical stack inside the mobile hamburger panel. */
+.mega-pillar-card__copy {
+  /* Negative margin pulls the description visually closer to the
+     short line above it (they read as one block) while the parent
+     flex gap continues to space num/title/dek normally. */
+  margin: -6px 0 0;
+  max-width: 34ch;
+  color: var(--faa-gray-600);
+  opacity: 0.85;
+  font-size: 13px;
+  line-height: 1.5;
+}
+@media (max-width: 1023px) {
+  .mega-pillar-card__copy { display: none; }
+}
 .mega-pillar-card:hover .mega-pillar-card__title,
 .mega-pillar-card:focus-visible .mega-pillar-card__title {
   color: var(--faa-blue);
