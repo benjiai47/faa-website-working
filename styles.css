@@ -2537,8 +2537,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     background-image:
       linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.94) 0%,
-        rgba(255, 255, 255, 0.88) 100%
+        rgba(255, 255, 255, 0.80) 0%,
+        rgba(255, 255, 255, 0.70) 100%
       ),
       url('/assets/navigation/methodology/methodology-data-curation-governance.webp');
   }
@@ -2546,8 +2546,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     background-image:
       linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.94) 0%,
-        rgba(255, 255, 255, 0.88) 100%
+        rgba(255, 255, 255, 0.80) 0%,
+        rgba(255, 255, 255, 0.70) 100%
       ),
       url('/assets/navigation/methodology/methodology-workflow-optimization.webp');
   }
@@ -2555,8 +2555,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     background-image:
       linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.94) 0%,
-        rgba(255, 255, 255, 0.88) 100%
+        rgba(255, 255, 255, 0.80) 0%,
+        rgba(255, 255, 255, 0.70) 100%
       ),
       url('/assets/navigation/methodology/methodology-ai-design-implementation.webp');
   }
