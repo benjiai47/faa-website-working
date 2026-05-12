@@ -44,6 +44,10 @@
       '<a href="/industries/">Where We Work</a>',
       '<a href="/insights/">AI Advisory</a>',
       '<a href="/about/">About</a>',
+      '<a href="/client-workspace/" class="mobile-menu-workspace">',
+      '  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.2" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7V5a2.5 2.5 0 1 1 5 0v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
+      '  <span>Client Workspace</span>',
+      '</a>',
       '<a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-menu-cta">Business Systems Assessment</a>'
     ].join('');
     header.appendChild(panel);

@@ -3367,3 +3367,55 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   background: var(--faa-gray-50);
   border-color: var(--faa-gray-200);
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   Client Workspace utility access link in the header.
+   Sits to the LEFT of the Business Systems Assessment CTA on
+   desktop. Hidden under 1280px because the same destination is
+   surfaced inside the mobile hamburger panel (nav.js).
+   Reads as a utility access link — not as marketing nav.
+───────────────────────────────────────────────────────────────── */
+.utility-access-link {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  color: var(--faa-gray-600);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 18px;
+  padding: 6px 4px;
+  transition: color 180ms ease-out;
+}
+@media (min-width: 1280px) {
+  .utility-access-link { display: inline-flex; }
+}
+.utility-access-link svg {
+  flex-shrink: 0;
+  color: var(--faa-gray-400);
+  transition: color 180ms ease-out;
+}
+.utility-access-link:hover,
+.utility-access-link:focus-visible {
+  color: var(--faa-navy);
+}
+.utility-access-link:hover svg,
+.utility-access-link:focus-visible svg {
+  color: var(--faa-blue);
+}
+.utility-access-link:focus-visible {
+  outline: 2px solid var(--faa-blue);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+/* Mobile menu version of the same link — appears as a row inside
+   the hamburger panel, with a small lock glyph. */
+.mobile-menu-panel a.mobile-menu-workspace {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mobile-menu-panel a.mobile-menu-workspace svg {
+  flex-shrink: 0;
+  color: var(--faa-gray-400);
+}
