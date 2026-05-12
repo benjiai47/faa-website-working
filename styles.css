@@ -2932,6 +2932,78 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   background: var(--faa-blue);
 }
 
+/* Workforce Development Topics — question-card grid on the AI Training
+   page. Editorial FAQ feel: small eyebrow + h3 + lead-in, then an
+   ordered list of numbered question cards in 1/2/3 columns. Each card
+   uses an h4 inside an <ol><li>, which gives answer engines clean,
+   scannable question content and keeps the visual rhythm restrained
+   (white surface, hairline border, blue top accent, muted number,
+   navy question). No hover state — these are content cards, not
+   links. */
+.workforce-topics-h3 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.22;
+  color: var(--faa-navy);
+}
+@media (min-width: 1024px) {
+  .workforce-topics-h3 { font-size: 26px; }
+}
+.workforce-topics-intro {
+  max-width: 760px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--faa-gray-600);
+}
+.workforce-topic-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  counter-reset: workforce-topic;
+}
+@media (min-width: 768px) {
+  .workforce-topic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .workforce-topic-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+.workforce-topic-card {
+  position: relative;
+  padding: 20px 22px 22px;
+  background: var(--faa-white);
+  border: 1px solid var(--faa-gray-200);
+  border-top: 3px solid var(--faa-blue);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.workforce-topic-number {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--faa-blue);
+  line-height: 1;
+}
+.workforce-topic-q {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--faa-navy);
+}
+
 /* Common Data Problems grid — sits below the Executive Answer on the
    foundation page. Restrained card treatment, blue top rule, navy
    title, body-text dek. No icons. */
