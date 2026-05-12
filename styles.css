@@ -3419,3 +3419,63 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   flex-shrink: 0;
   color: var(--faa-gray-400);
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   AI Perspectives mega-menu (Insights) — editorial command center.
+   Layout: a small positioning intro line spans the top of the
+   dropdown, followed by a 3-column grid where the Featured column
+   is the visual anchor (shaded panel), By Pillar sits in the middle
+   with strong typography, and By Format reads as a secondary
+   reference column.
+───────────────────────────────────────────────────────────────── */
+.mega-insights-intro {
+  max-width: 760px;
+  margin: 0 0 28px;
+  color: var(--faa-gray-600);
+  font-size: 14px;
+  line-height: 1.55;
+  font-style: italic;
+}
+@media (min-width: 768px) {
+  .mega-insights-intro {
+    margin-bottom: 32px;
+  }
+}
+/* Featured column: shaded panel, slight border, anchoring weight.
+   Sits inside the existing .mega-grid-3 grid as the first column. */
+.mega-insights-featured {
+  background: var(--faa-blue-50);
+  border: 1px solid var(--faa-blue);
+  border-radius: 8px;
+  padding: 22px 22px 18px;
+}
+.mega-insights-featured .mega-group-heading {
+  margin-top: 0;
+  color: var(--faa-blue);
+  border-bottom-color: rgba(45, 104, 158, 0.22);
+}
+.mega-insights-featured .mega-link {
+  /* The Featured column sits on a tinted background, so links
+     don't need the gray-on-white hover wash — they get a slight
+     navy intensification on hover instead. */
+  color: var(--faa-navy);
+  font-weight: 600;
+}
+.mega-insights-featured .mega-link .mega-link-dek {
+  color: var(--faa-gray-600);
+  font-weight: 500;
+}
+/* By Format column: still browsable, but visually quieter than
+   the other two — smaller dek text, lighter color, tighter spacing
+   so the column reads as a reference list rather than an editorial
+   anchor. */
+.mega-insights-format .mega-group-heading {
+  color: var(--faa-gray-600);
+}
+.mega-insights-format .mega-link {
+  color: var(--faa-gray-700);
+}
+.mega-insights-format .mega-link .mega-link-dek {
+  color: var(--faa-gray-400);
+  font-size: 12px;
+}
