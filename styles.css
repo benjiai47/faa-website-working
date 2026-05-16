@@ -1896,6 +1896,37 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   padding-top: 34px;
   border-top: 1px solid var(--faa-gray-100);
 }
+/* Article hero image — sits inside the .insight-detail-hero block
+   between the meta row and the H1 title. Used on long-form executive
+   guides where the photo establishes the subject visually before the
+   headline reads. Constrained max-height on desktop so it does not
+   dominate the hero; aspect-ratio fallback keeps the cell sized
+   correctly on legacy browsers. Eager-loaded because it sits above
+   the fold and is part of the LCP path. */
+.insight-hero-image {
+  margin: 28px 0 4px;
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--faa-gray-100);
+}
+@media (min-width: 1024px) {
+  .insight-hero-image {
+    aspect-ratio: 21 / 9;
+    max-height: 420px;
+    min-height: 320px;
+    margin: 32px 0 8px;
+  }
+}
+.insight-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 /* Capital Decisions executive guide — page-specific blocks layered
    on top of the insight-detail-* base. Adds a stronger CTA pair on
    the hero, an executive-question pull style for the framework
