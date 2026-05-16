@@ -142,104 +142,224 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 
 /* ─────────────────────────────────────────────────────────────────
    Engagement Model section (homepage "How to Engage")
-   Three-card progression: Assessment → Sprint → Ongoing Expansion.
-   Adds a subtle horizontal connector through the .method-num boxes
-   on desktop, a faint per-card watermark image, and a featured
-   treatment on card 02. Mobile stacks cleanly without the connector
-   (vertical order already implies sequence).
+   Editorial pathway: three large horizontal panels representing the
+   diagnose → execute → scale sequence. Alternating image/copy
+   columns on desktop, single-column vertical pathway on mobile, with
+   a thin vertical connector running behind the cards to reinforce
+   the sequence. Step 02 (90-Day AI Execution Sprint) is visually
+   emphasized as the Core Execution Engagement with a blue top rule,
+   soft shadow, and an inline editorial label.
+
+   Replaces the previous 3-up .engagement-grid/.engagement-card card
+   layout — stronger differentiation from the methodology, industry,
+   and insights card grids elsewhere on the home page.
 ───────────────────────────────────────────────────────────────── */
-.engagement-grid {
+.engagement-pathway {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
   position: relative;
+}
+@media (min-width: 768px) {
+  .engagement-pathway { gap: 40px; }
 }
 @media (min-width: 1024px) {
-  /* Hairline connector behind the cards, passing through the vertical
-     center of the .method-num boxes (card padding 28px + half of the
-     56px number box = 56px from card top). Sits at z-index 0 with the
-     cards lifted to z-index 1, so the line is only visible in the
-     gap-6 between cards. Reads as a single editorial path. */
-  .engagement-grid::before {
-    content: '';
-    position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--faa-gray-200);
-    z-index: 0;
-    pointer-events: none;
-  }
+  .engagement-pathway { gap: 56px; }
 }
-.engagement-card {
+/* Vertical connector running down the center of the pathway, behind
+   the cards. Visible only in the gaps between steps — cards sit at
+   z-index 1 with white backgrounds so the line reads as a
+   progression spine. */
+.engagement-pathway::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--faa-gray-200);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.engagement-step {
   position: relative;
   z-index: 1;
-  isolation: isolate;
+  display: grid;
+  grid-template-columns: 1fr;
   background: var(--faa-white);
+  border: 1px solid var(--faa-gray-100);
+  border-radius: 4px;
+}
+@media (min-width: 1024px) {
+  .engagement-step {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+  /* Alternating layout: image LEFT on 01 + 03, image RIGHT on 02
+     (the featured Core Execution Engagement, anchoring the middle of
+     the pathway with the inverse rhythm). */
+  .engagement-step--02 .engagement-step__media { order: 2; }
+  .engagement-step--02 .engagement-step__content { order: 1; }
+}
+
+.engagement-step__media {
+  margin: 0;
+  position: relative;
   overflow: hidden;
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+  background: var(--faa-gray-100);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
-/* These cards are informational, not clickable. The .card:hover state's
-   lift + tint would falsely suggest the whole card is a link (it's
-   not — only the .read-link inside is interactive) and would create a
-   visual gap between the card and the connector line. Hold the card
-   still and let the interior .read-link's underline carry the hover
-   affordance. */
-.engagement-card:hover {
-  transform: none;
-  background: var(--faa-white);
-  border-color: var(--faa-gray-100);
-  box-shadow: none;
+@media (min-width: 1024px) {
+  .engagement-step__media {
+    aspect-ratio: auto;
+    min-height: 380px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+  }
+  /* On step 02 the image sits on the right, so swap the rounded
+     corners to follow that edge. */
+  .engagement-step--02 .engagement-step__media {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
 }
-.engagement-card--featured:hover {
-  /* Preserve the featured card's elevated shadow + blue top rule. */
-  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.08);
-  border-color: var(--faa-gray-100);
-  border-top-color: var(--faa-blue);
+.engagement-step__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 600ms ease-out;
 }
-/* The card title (<h3>) is now a link to the dedicated page. Inherit
-   the navy color from the parent style so the visual stays consistent
-   with the non-link version, but pick up a subtle FAA-blue color shift
-   on hover/focus so the affordance is visible without underlining the
-   title (which would look noisy). */
-.engagement-card h3 a {
+/* Focal-point biasing per CEP guidance. */
+.engagement-step--01 .engagement-step__media img { object-position: center 35%; }
+.engagement-step--02 .engagement-step__media img { object-position: center 60%; }
+.engagement-step--03 .engagement-step__media img { object-position: center center; }
+.engagement-step:hover .engagement-step__media img,
+.engagement-step:focus-within .engagement-step__media img {
+  transform: scale(1.03);
+}
+
+.engagement-step__content {
+  padding: 28px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .engagement-step__content {
+    padding: 44px 48px;
+    gap: 14px;
+  }
+}
+@media (min-width: 1280px) {
+  .engagement-step__content {
+    padding: 56px 64px;
+  }
+}
+
+.engagement-step__header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 2px;
+}
+.engagement-step__num {
+  font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--faa-blue);
+  line-height: 1;
+}
+@media (min-width: 1024px) {
+  .engagement-step__num { font-size: 36px; }
+}
+.engagement-step__phase {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--faa-gray-600);
+  line-height: 1;
+}
+.engagement-step__featured-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--faa-blue);
+  line-height: 1;
+}
+
+.engagement-step__title {
+  margin: 4px 0 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.22;
+  color: var(--faa-navy);
+  letter-spacing: -0.01em;
+}
+@media (min-width: 1024px) {
+  .engagement-step__title { font-size: 28px; }
+}
+.engagement-step__title a {
   color: inherit;
   text-decoration: none;
   transition: color 180ms ease-out;
 }
-.engagement-card h3 a:hover,
-.engagement-card h3 a:focus-visible {
+.engagement-step__title a:hover,
+.engagement-step__title a:focus-visible {
   color: var(--faa-blue);
 }
-/* Faint watermark layer — themed image at very low opacity, sits
-   behind all card content. Inline --engagement-bg supplies the URL
-   per card so this rule is content-agnostic. */
-.engagement-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: var(--engagement-bg);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.09;
-  z-index: -1;
-  pointer-events: none;
+
+.engagement-step__lede {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--faa-gray-600);
 }
-/* Card 02 featured treatment: stronger top rule (faa-blue), slightly
-   deeper shadow, small uppercase eyebrow label above the number box.
-   Restrained — should read as 'the primary engagement,' not as a
-   pricing-card upsell. */
-.engagement-card--featured {
+
+.engagement-step__list {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--faa-gray-600);
+}
+.engagement-step__list li {
+  margin-bottom: 4px;
+}
+.engagement-step__list li:last-child {
+  margin-bottom: 0;
+}
+
+.engagement-step__cta {
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+/* Featured 02: subtle blue top rule + soft shadow. Reads as 'the
+   primary engagement,' not a pricing upsell. */
+.engagement-step--featured {
   border-top: 3px solid var(--faa-blue);
   box-shadow: 0 6px 22px rgba(15, 23, 42, 0.08);
 }
-.engagement-featured-label {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--faa-blue);
-  margin-bottom: 14px;
-}
-/* Editorial guidance line under the three cards. Centered, restrained
+
+/* Editorial guidance line under the pathway. Centered, restrained
    color, with subtle inline link styling. */
 .engagement-guidance {
   max-width: 760px;
