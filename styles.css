@@ -2700,11 +2700,24 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .pillar-card.pillar-card--workflow,
   .pillar-card.pillar-card--ai {
     background-color: var(--faa-white);
-    grid-template-columns: 80px 1fr;
+    /* Single column on mobile — full-bleed image on top, body
+       beneath, no separate PILLAR/01 rail. Matches the insights
+       article card pattern, removes the narrow left column and
+       its vertical divider that wasted horizontal space and
+       awkwardly split each card. */
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
-      "visual visual"
-      "num body";
+      "visual"
+      "body";
+  }
+  /* Hide the PILLAR/01 number column on mobile. Sequence is implied
+     by card order; the kicker ("DATA CURATION & GOVERNANCE", etc.)
+     already labels each pillar. */
+  .pillar-card.pillar-card--data .pillar-card-num,
+  .pillar-card.pillar-card--workflow .pillar-card-num,
+  .pillar-card.pillar-card--ai .pillar-card-num {
+    display: none;
   }
   /* Restore the .pillar-card-visual on mobile and place it on top.
      The base 1023px breakpoint already sized this 16:7; tweak to
