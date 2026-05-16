@@ -351,6 +351,34 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   margin-top: 10px;
   align-self: flex-start;
 }
+/* Stretched-link pattern — make the entire .engagement-step tile a
+   single click target. The CTA's ::after pseudo absolutely covers the
+   whole card. Pseudo positioning looks up to the nearest positioned
+   ancestor; .engagement-step already has position: relative so the
+   pseudo stretches to fill it. The CTA itself stays position: static
+   on purpose — if it were positioned, the pseudo would only cover
+   the CTA's own text box. The pseudo is transparent so the inline
+   text and arrow stay visible underneath. Clicks anywhere on the
+   tile fire the CTA link's href because pseudos forward pointer
+   events to their generating element. */
+.engagement-step {
+  cursor: pointer;
+}
+.engagement-step__cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+/* With the stretched pseudo capturing pointer events, the title <a>
+   no longer triggers its own :hover when the mouse is over the
+   title's text region (the pseudo is on top). Tie the title's
+   color-shift to the parent card's hover/focus-within instead so
+   hovering anywhere on the tile still produces the engagement signal. */
+.engagement-step:hover .engagement-step__title a,
+.engagement-step:focus-within .engagement-step__title a {
+  color: var(--faa-blue);
+}
 
 /* Featured 02: subtle blue top rule + soft shadow. Reads as 'the
    primary engagement,' not a pricing upsell. */
