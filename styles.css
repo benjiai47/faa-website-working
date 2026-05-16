@@ -3952,6 +3952,26 @@ a:focus-visible, button:focus-visible, input:focus-visible {
    surfaced inside the mobile hamburger panel (nav.js).
    Reads as a utility access link — not as marketing nav.
 ───────────────────────────────────────────────────────────────── */
+/* Site-header logo. Replaces the previous inline-style approach
+   (height:48px;width:auto;max-width:none;display:block) with a
+   class so we can size the logo responsively. On desktop the logo
+   renders at its original 48px height; on mobile it scales down
+   to 36px so the wordmark stops crowding the hamburger and the
+   compact Assessment CTA in the same header row. Aspect ratio is
+   preserved via width: auto — the image's natural ratio drives
+   the proportional shrink. */
+.site-header-logo {
+  height: 48px;
+  width: auto;
+  max-width: none;
+  display: block;
+}
+@media (max-width: 639px) {
+  .site-header-logo {
+    height: 36px;
+  }
+}
+
 /* Mobile-only compact "Assessment" CTA in the site header. Sits
    between the (hidden-on-mobile) Client Workspace link and the
    (hidden-on-mobile) full "Business Systems Assessment" desktop
