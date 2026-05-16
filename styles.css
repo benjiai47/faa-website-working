@@ -433,6 +433,278 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 }
 
 /* ─────────────────────────────────────────────────────────────────
+   Foundation Sequence cards — image-backed variant.
+   Used on the homepage Foundation Before AI band to upgrade the
+   flat dark cards to colorful image-backed tiles. The image fills
+   the card behind the content; a dark bottom-up gradient overlay
+   keeps the number/title/copy readable while letting the image
+   carry the section's visual energy.
+───────────────────────────────────────────────────────────────── */
+.foundation-sequence-band__cards--image {
+  /* Override the band cards grid for the image variant — taller
+     rows so the imagery actually has surface to breathe on. */
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .foundation-sequence-band__cards--image {
+    gap: 20px;
+  }
+}
+.foundation-sequence-card--image {
+  /* Layered card: image at z:0, gradient at z:1, content at z:2.
+     min-height creates the editorial portrait/landscape feel on
+     desktop; the content sits flush at the bottom. */
+  padding: 0;
+  min-height: 280px;
+  display: flex;
+  align-items: stretch;
+  /* Override the translucent white wash from the base card — the
+     image carries the surface treatment now. Solid navy fallback
+     in case the image fails to load. */
+  background: #0b1728;
+  border-radius: 10px;
+  overflow: hidden;
+  /* Extend the base card's transition to include box-shadow so the
+     hover glow animates smoothly with the lift. */
+  transition: border-color 220ms ease-out, transform 220ms ease-out, box-shadow 220ms ease-out;
+}
+@media (min-width: 1024px) {
+  .foundation-sequence-card--image {
+    min-height: 320px;
+  }
+}
+.foundation-sequence-card--image .foundation-sequence-card__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.foundation-sequence-card--image .foundation-sequence-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Slight saturation + contrast bump unifies the three different
+     methodology photos under a single editorial tone. */
+  filter: saturate(1.05) contrast(1.04);
+  transform: scale(1.03);
+  transition: transform 260ms ease-out, filter 260ms ease-out;
+}
+/* Bottom-up gradient overlay so the white text reads cleanly over
+   the imagery without darkening the top of the image where the
+   subject usually sits. */
+.foundation-sequence-card--image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg,
+      rgba(5, 15, 32, 0.16) 0%,
+      rgba(5, 15, 32, 0.62) 52%,
+      rgba(5, 15, 32, 0.94) 100%),
+    linear-gradient(90deg,
+      rgba(5, 15, 32, 0.30),
+      transparent 60%);
+  pointer-events: none;
+}
+.foundation-sequence-card--image .foundation-sequence-card__content {
+  position: relative;
+  z-index: 2;
+  align-self: end;
+  width: 100%;
+  padding: 22px 22px 24px;
+}
+.foundation-sequence-card--image .foundation-sequence-card__num {
+  /* Override the base card's navy left-rule num — over imagery the
+     cyan-blue reads more clearly than --faa-blue against varied
+     photo backgrounds. */
+  color: #7fd4ff;
+  margin-bottom: 8px;
+}
+.foundation-sequence-card--image .foundation-sequence-card__title {
+  color: var(--faa-white);
+  /* Subtle text shadow for AA contrast over any image region the
+     gradient doesn't fully darken. */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.foundation-sequence-card--image .foundation-sequence-card__copy {
+  color: rgba(255, 255, 255, 0.82);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.30);
+}
+.foundation-sequence-card--image .foundation-sequence-card__cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #7fd4ff;
+  transition: color 180ms ease;
+}
+.foundation-sequence-card--image .foundation-sequence-card__cta .arrow {
+  display: inline-block;
+  transition: transform 180ms ease;
+  margin-left: 2px;
+}
+/* Hover — lift the card, brighten + zoom the image, slide the CTA
+   arrow right a touch. Stretched-link pattern already covers the
+   click target via the .foundation-sequence-card__link sibling. */
+.foundation-sequence-card--image:hover,
+.foundation-sequence-card--image:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(127, 212, 255, 0.50);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.32), 0 0 26px rgba(40, 170, 210, 0.14);
+}
+.foundation-sequence-card--image:hover .foundation-sequence-card__image img,
+.foundation-sequence-card--image:focus-within .foundation-sequence-card__image img {
+  transform: scale(1.08);
+  filter: saturate(1.16) contrast(1.06);
+}
+.foundation-sequence-card--image:hover .foundation-sequence-card__cta .arrow,
+.foundation-sequence-card--image:focus-within .foundation-sequence-card__cta .arrow {
+  transform: translateX(3px);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Homepage FAA Methodology section — two-column executive layout.
+   Replaces the previous single-column text-heavy intro with a
+   balanced left-copy / right-sequence-panel composition. The right
+   panel is a dark navy gradient card with the three numbered steps
+   stacked vertically, mirroring the methodology sequence visually
+   while keeping the body copy lean and outcome-focused on the left.
+───────────────────────────────────────────────────────────────── */
+.home-methodology-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(36px, 5vw, 72px);
+  align-items: start;
+}
+@media (min-width: 1024px) {
+  .home-methodology-inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+    gap: clamp(48px, 6vw, 88px);
+    align-items: center;
+  }
+}
+.home-methodology-copy {
+  max-width: 640px;
+}
+.home-methodology-copy h2 {
+  /* Tighter letter-spacing than the global .h2 default for an
+     executive editorial feel on this hero-of-second-fold headline. */
+  letter-spacing: -0.025em;
+}
+.home-methodology-outcomes {
+  margin-top: clamp(28px, 3vw, 40px);
+}
+.home-methodology-outcomes__label {
+  margin: 0 0 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faa-navy);
+}
+.home-methodology-outcomes__chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+.home-methodology-outcomes__chips li {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--faa-navy);
+  background: linear-gradient(180deg, rgba(247, 251, 255, 1) 0%, rgba(234, 243, 250, 0.95) 100%);
+  border: 1px solid rgba(45, 104, 158, 0.18);
+  border-radius: 999px;
+  letter-spacing: 0.005em;
+}
+
+/* Right-side methodology sequence panel — dark navy card with the
+   three numbered steps stacked vertically. Each step is its own
+   link so users can jump directly into the pillar pages from this
+   panel. */
+.home-methodology-sequence {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  padding: clamp(20px, 2.6vw, 30px);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(40, 170, 210, 0.22), transparent 32%),
+    linear-gradient(135deg, #07172c 0%, #102b49 58%, #163d61 100%);
+  box-shadow:
+    0 24px 60px rgba(8, 24, 46, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+  isolation: isolate;
+}
+.home-methodology-sequence::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent 42%),
+    radial-gradient(circle at 18% 82%, rgba(127, 212, 255, 0.14), transparent 32%);
+  pointer-events: none;
+}
+.home-methodology-step {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 16px;
+  row-gap: 4px;
+  align-items: start;
+  padding: 16px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--faa-white);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.home-methodology-step:hover,
+.home-methodology-step:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(127, 212, 255, 0.48);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+.home-methodology-step:focus-visible {
+  outline: 2px solid rgba(127, 212, 255, 0.92);
+  outline-offset: 3px;
+}
+.home-methodology-step__num {
+  grid-row: span 2;
+  font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  color: #7fd4ff;
+  letter-spacing: 0;
+}
+.home-methodology-step__label {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--faa-white);
+  letter-spacing: -0.005em;
+}
+.home-methodology-step__copy {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ─────────────────────────────────────────────────────────────────
    Engagement Model section (homepage "How to Engage")
    Editorial pathway: three large horizontal panels representing the
    diagnose → execute → scale sequence. Alternating image/copy
