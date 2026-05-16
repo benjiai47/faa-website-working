@@ -248,6 +248,30 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   background: rgba(255, 255, 255, 0.06);
   transform: translateY(-1px);
 }
+/* Stretched link — makes the entire card a single tap/click target
+   without nesting interactive elements. The anchor carries the href
+   + aria-label, then expands invisibly to cover the card via
+   position:absolute + inset:0. The :focus-visible ring renders on
+   the anchor itself so keyboard users get a clear outline around
+   the card. */
+.foundation-sequence-card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 6px;
+  /* No visible content — the visible card label is rendered by the
+     sibling <h3>. aria-label on the anchor provides the accessible
+     name. */
+  text-decoration: none;
+  /* Hide any accidental text that lands inside the anchor without
+     affecting hit testing. */
+  font-size: 0;
+  color: transparent;
+}
+.foundation-sequence-card__link:focus-visible {
+  outline: 2px solid rgba(86, 156, 214, 0.95);
+  outline-offset: 3px;
+}
 .foundation-sequence-card__num {
   display: inline-block;
   font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
@@ -2822,6 +2846,20 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     border-top: 2px solid var(--faa-blue);
     padding: 28px 0 0;
   }
+}
+/* Standalone variant — used on the homepage where the Executive
+   Answers panel sits as its own full-width section directly under
+   the Foundation Sequence band (not in the usual two-column
+   methodology-intro-grid). Drops the sticky position and the
+   left-rule treatment (which only reads cleanly alongside a tall
+   left column of narrative), and uses the same top-border accent
+   on all viewports. */
+.methodology-aeo--standalone {
+  position: static;
+  border-left: 0;
+  border-top: 2px solid var(--faa-blue);
+  padding: 28px 0 0;
+  max-width: 880px;
 }
 .methodology-aeo .aeo-heading {
   color: var(--faa-navy);
