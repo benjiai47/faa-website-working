@@ -621,6 +621,20 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   border-bottom: 1px solid var(--faa-gray-200);
   box-shadow: 0 14px 24px rgba(15,23,42,0.08);
   padding: 10px 24px 18px;
+  /* Cap the panel at the available viewport height (below the 96px
+     sticky header) and let it scroll internally when the menu has
+     more items than fit. Without this, the content overflows below
+     the fold with no way to reach it — the page itself can't scroll
+     because the header (and this absolutely-positioned panel) sits
+     on top of everything. Use dynamic-viewport-height (dvh) so the
+     panel adjusts as iOS Safari's URL bar shows/hides; vh is the
+     fallback for older browsers. -webkit-overflow-scrolling: touch
+     enables momentum scroll on legacy iOS. */
+  max-height: calc(100vh - 96px);
+  max-height: calc(100dvh - 96px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 .mobile-menu-panel[data-open="true"] {
   display: grid;
