@@ -2930,15 +2930,31 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   padding: 40px 44px;
   min-width: 0;
 }
+/* Swapped typography on the home pillar cards: the pillar category
+   name (.kicker — DATA CURATION & GOVERNANCE etc.) is the dominant
+   headline, and the descriptive title below it (.pillar-card-headline
+   — "The Foundation of Reliable AI" etc.) is the small-caps subtitle.
+   Inverts the conventional small-eyebrow / big-title hierarchy on
+   purpose so the pillar identity reads first and loudest.
+
+   These rules apply only inside .pillar-card-body, so other uses of
+   .kicker elsewhere on the site are unaffected. */
 .pillar-card-body .kicker {
   margin-bottom: 10px;
-}
-.pillar-card-headline {
   color: var(--faa-navy);
   font-size: clamp(22px, 2.2vw, 28px);
   font-weight: 600;
   letter-spacing: -0.015em;
   line-height: 1.2;
+  text-transform: none;
+}
+.pillar-card-headline {
+  color: var(--faa-navy);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 .pillar-card-dek {
   color: var(--faa-gray-600);
