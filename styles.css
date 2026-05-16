@@ -981,6 +981,16 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 .subnav-link.active { color: var(--faa-white); }
 .subnav-link.active::after { background: var(--faa-blue-light); }
 
+/* Primary nav block — add extra breathing room between the FAA
+   wordmark logo and the first nav item ("Home"). The HTML uses
+   `mx-6` (24px each side) which leaves Home visually crowded
+   against the logo on wide screens. Higher specificity than the
+   Tailwind utility so we override only the left margin and leave
+   the right margin (24px) intact for the CTA cluster. */
+#site-header nav[aria-label="Primary"] {
+  margin-left: 48px;
+}
+
 /* Utility nav links */
 .utilnav-link {
   position: relative;
