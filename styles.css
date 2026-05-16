@@ -2621,16 +2621,13 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   min-height: 240px;
 }
 .pillar-card-visual img {
-  /* Medium brightness lift. The three pillar photos are very dark
-     cinematic shots; pure brightness alone washes the highlights
-     before the shadows open. Compound recipe: brightness 1.25 lifts
-     the whole frame, contrast 0.9 lifts shadows faster than
-     highlights (no clipping on the window/screen bright bumps),
-     saturate 1.05 keeps the navy/steel palette lively after the
-     brightness bump. Preserves the FAA palette — no wash-out, no
-     neon. Iterable: dial brightness up to 1.32 for a stronger lift,
-     down to 1.18 for a more subtle treatment. */
-  filter: brightness(1.32) contrast(0.88) saturate(1.05);
+  /* The home page pillars now share the bright, daylit methodology
+     dropdown photographs. No exposure correction needed — the
+     previous brightness(1.32) recipe was tuned for the dark
+     cinematic shots we retired and would wash these images out.
+     A barely-there 1.02 nudge keeps them feeling consistent with
+     the rest of the site without flattening contrast. */
+  filter: brightness(1.02);
   position: absolute;
   inset: 0;
   width: 100%;
@@ -2650,10 +2647,10 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .pillar-card:hover .pillar-card-visual img {
   transform: scale(1.04);
-  /* Hover settles the lifted base back toward the original mood and
-     bumps saturation slightly for a "lean in" feel — engagement
-     signal without losing the lighter treatment. */
-  filter: brightness(1.22) contrast(0.93) saturate(1.12);
+  /* Hover keeps the image bright and adds a subtle saturation lift
+     for engagement — no aggressive brightness change because the
+     base treatment is already near the natural exposure. */
+  filter: brightness(1.04) saturate(1.08);
 }
 .pillar-card:hover .pillar-card-visual::after {
   background: linear-gradient(180deg, rgba(15,23,42,0) 50%, rgba(15,23,42,0.16) 100%);
