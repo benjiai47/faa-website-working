@@ -4196,6 +4196,116 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
+/* ─────────────────────────────────────────────────────────────────
+   Industries page hero — full-width 10-image collage.
+   Replaces the single .page-hero-image background with a 5x2 grid
+   of the existing industry tile images, so the hero immediately
+   communicates "FAA works across multiple operating environments."
+   Scoped under .industries-hero-collage so the global .page-hero
+   pattern stays untouched everywhere else.
+───────────────────────────────────────────────────────────────── */
+.industries-hero-collage .page-hero-collage {
+  /* Sits in the same layered slot as .page-hero-image — absolute
+     fill behind the overlay and content. Edge-to-edge by virtue
+     of being outside .container-faa. */
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0;
+  background: var(--faa-navy-deep);
+  z-index: 0;
+}
+.industries-hero-collage .page-hero-collage__cell {
+  position: relative;
+  overflow: hidden;
+}
+.industries-hero-collage .page-hero-collage__cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Slight desaturation + contrast bump unifies ten different
+     industry photos under a single editorial tone. */
+  filter: grayscale(10%) saturate(0.92) contrast(1.06);
+  opacity: 0.86;
+  transform: scale(1.04);
+}
+/* Per-cell object-position variation so the same-aspect images don't
+   read as a flat grid — each cell crops to a slightly different
+   focal point for editorial rhythm. */
+.industries-hero-collage .page-hero-collage__cell:nth-child(2) img { object-position: 55% center; }
+.industries-hero-collage .page-hero-collage__cell:nth-child(3) img { object-position: center 45%; }
+.industries-hero-collage .page-hero-collage__cell:nth-child(4) img { object-position: 60% center; }
+.industries-hero-collage .page-hero-collage__cell:nth-child(6) img { object-position: 45% center; transform: scale(1.08); }
+.industries-hero-collage .page-hero-collage__cell:nth-child(7) img { object-position: center 60%; }
+.industries-hero-collage .page-hero-collage__cell:nth-child(9) img { object-position: 60% 40%; transform: scale(1.08); }
+.industries-hero-collage .page-hero-collage__cell:nth-child(10) img { object-position: 40% center; }
+/* Stronger left-side overlay so the white hero copy reads cleanly
+   over whatever images land in the left columns. Replaces the
+   global .page-hero-overlay default which was tuned for a single
+   abstract flow image — too gentle for ten colorful photos. */
+.industries-hero-collage .page-hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(5, 15, 32, 0.94) 0%,
+      rgba(5, 15, 32, 0.86) 30%,
+      rgba(5, 15, 32, 0.62) 58%,
+      rgba(5, 15, 32, 0.42) 100%),
+    linear-gradient(180deg,
+      rgba(5, 15, 32, 0.20) 0%,
+      rgba(5, 15, 32, 0.58) 100%);
+}
+/* Subtle cyan tint layer to tie the collage to FAA's blue/cyan
+   accent palette without making the hero feel SaaS-flashy. */
+.industries-hero-collage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(45, 166, 214, 0.16), transparent 36%),
+    linear-gradient(90deg, rgba(17, 164, 194, 0.06), transparent 55%);
+  pointer-events: none;
+}
+@media (max-width: 1023px) {
+  /* Tablet — drop to 4-column grid so cells remain photographic, not
+     postage-stamp sized. */
+  .industries-hero-collage .page-hero-collage {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  /* Hide the last 2 images on this tighter grid (8 cells now). The
+     hero copy carries the meaning; the collage is decorative. */
+  .industries-hero-collage .page-hero-collage__cell:nth-child(n+9) {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  /* Mobile — 2-col x 3-row collage with 6 of the 10 images. Keeps
+     the visual rhythm without making the hero too tall or busy
+     above the fold on phones. */
+  .industries-hero-collage .page-hero-collage {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .industries-hero-collage .page-hero-collage__cell:nth-child(n+7) {
+    display: none;
+  }
+  .industries-hero-collage .page-hero-collage__cell img {
+    opacity: 0.62;
+  }
+  /* Vertical top-down wash on mobile since the hero stacks and text
+     sits across the full image width, not just the left side. */
+  .industries-hero-collage .page-hero-overlay {
+    background:
+      linear-gradient(180deg,
+        rgba(5, 15, 32, 0.92) 0%,
+        rgba(5, 15, 32, 0.80) 45%,
+        rgba(5, 15, 32, 0.62) 100%);
+  }
+}
+
 /* AI Frontiers hero CTA — "Frontier Signal" treatment.
    Page-scoped under .ai-frontiers-hero so this premium blue/cyan
    gradient button only appears here. Pairs visually with the
