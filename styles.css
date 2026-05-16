@@ -4162,6 +4162,70 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
+/* AI Frontiers — "Family Medical Lineage as an AI Baseline" subsection.
+   Editorial extension of Frontier 01 (Lineage). Sits on the parent
+   section's gray-50 surface as a slightly elevated white card with a
+   navy left rule so it reads as a focused subsection rather than a
+   new top-level section. Privacy-aware editorial framing — no
+   medical product cues, no clinical iconography. */
+.medical-lineage-subsection {
+  margin-top: clamp(56px, 7vw, 88px);
+  padding: clamp(28px, 4vw, 44px);
+  background: var(--faa-white);
+  border-left: 3px solid var(--faa-blue);
+  border-radius: 4px;
+  /* Subtle lift to differentiate from the gray-50 parent surface
+     without competing with FAA's restrained editorial look. */
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04), 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+.medical-lineage-subsection__heading {
+  margin: 12px 0 0;
+  color: var(--faa-navy);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.medical-lineage-subsection__quote {
+  margin: clamp(28px, 4vw, 40px) 0 0;
+  padding: 6px 0 6px 22px;
+  border-left: 2px solid rgba(45, 104, 158, 0.55);
+  /* Serif voice for the pull-quote so it reads as editorial commentary
+     rather than another body paragraph. */
+  font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--faa-navy);
+}
+.medical-lineage-subsection__impact {
+  margin-top: clamp(24px, 3vw, 32px);
+  max-width: 60ch;
+  color: var(--faa-gray-700);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.medical-lineage-subsection__note {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--faa-gray-100);
+  /* --faa-gray-400 is the FAA "muted / secondary text" token, ideal
+     for a small editorial disclaimer that should read as a note,
+     not a competing piece of body copy. */
+  color: var(--faa-gray-400);
+  font-size: 13px;
+  line-height: 1.55;
+  font-style: italic;
+}
+@media (max-width: 767px) {
+  .medical-lineage-subsection {
+    padding: 24px 20px;
+  }
+  .medical-lineage-subsection__quote {
+    padding-left: 16px;
+  }
+}
+
 /* AI Decision Questions page — primary-content Q&A treatment.
    Reuses the FAQ <dl>/<dt>/<dd> semantics already used by the
    methodology AEO panel, but at body-text scale and full-content
