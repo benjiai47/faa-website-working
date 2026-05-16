@@ -1746,6 +1746,159 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   background-image: url('/assets/homepage-industry-ai-data-it-systems.webp');
 }
 
+/* ─────────────────────────────────────────────────────────────────
+   "Where We Work" mega-menu — premium variant.
+   Adds a left strategic context panel + tinted gradient surface +
+   slightly more visible photos + an arrow cue on hover. All scoped
+   under .mega-menu--industries so the Methodology / AI Training /
+   AI Perspectives mega-menus keep their existing white treatment.
+───────────────────────────────────────────────────────────────── */
+.mega-menu.mega-menu--industries {
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4fa 100%);
+  border-top: 1px solid rgba(42, 111, 170, 0.18);
+  border-bottom: 1px solid rgba(42, 111, 170, 0.14);
+  box-shadow: 0 24px 60px rgba(10, 25, 45, 0.16);
+}
+.mega-menu--industries .mega-menu-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .mega-menu--industries .mega-menu-inner {
+    /* Left panel ~28% of inner width, tiles fill the rest. */
+    grid-template-columns: minmax(220px, 0.30fr) 1fr;
+    gap: clamp(32px, 4vw, 56px);
+  }
+}
+
+/* Left strategic context panel — explains the category instead of
+   asking the user to infer it from a flat sitemap. */
+.mega-menu-context {
+  padding-top: 2px;
+}
+.mega-menu-context__eyebrow {
+  margin: 0 0 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faa-blue);
+}
+.mega-menu-context__copy {
+  margin: 0 0 18px;
+  max-width: 340px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--faa-navy);
+}
+.mega-menu-context__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--faa-blue);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.mega-menu-context__link:hover {
+  color: var(--faa-navy);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.mega-menu-context__link:focus-visible {
+  outline: 2px solid var(--faa-blue);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Right tile grid — fewer columns inside the upgraded menu so the
+   tiles breathe alongside the context panel. The base
+   .mega-industry-tiles still uses 5 columns site-wide (e.g. the
+   homepage "Where We Work" section), but the dropdown now caps at
+   4 columns on wide screens. */
+.mega-menu--industries .mega-industry-tiles {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 900px) {
+  .mega-menu--industries .mega-industry-tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  .mega-menu--industries .mega-industry-tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Tile enhancements inside the upgraded menu — slightly larger
+   radius, premium light shadow, more visible photo (less opaque
+   white wash), and a bigger hover lift. */
+.mega-menu--industries .mega-industry-tile {
+  border-color: rgba(42, 111, 170, 0.16);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 14px rgba(15, 35, 60, 0.05);
+}
+.mega-menu--industries .mega-industry-tile::before {
+  /* Lower opacity so the underlying industry photo reads more
+     clearly without overpowering the title/meta text on top. */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.86) 0%,
+    rgba(255, 255, 255, 0.78) 100%
+  );
+}
+.mega-menu--industries .mega-industry-tile:hover,
+.mega-menu--industries .mega-industry-tile:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(42, 111, 170, 0.50);
+  box-shadow: 0 16px 36px rgba(15, 35, 60, 0.14);
+}
+.mega-menu--industries .mega-industry-tile:hover::before,
+.mega-menu--industries .mega-industry-tile:focus-visible::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(255, 255, 255, 0.62) 100%
+  );
+}
+/* Arrow cue — pseudo element (no markup change required since the
+   tile's ::after wasn't previously used). Hidden until hover so the
+   default calm density is preserved. */
+.mega-menu--industries .mega-industry-tile::after {
+  content: "\2192"; /* → */
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  z-index: 2;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--faa-blue);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  pointer-events: none;
+}
+.mega-menu--industries .mega-industry-tile:hover::after,
+.mega-menu--industries .mega-industry-tile:focus-visible::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 899px) {
+  /* Narrow desktop / tablet — stack the context panel above the
+     grid and drop the copy max-width constraint. (The mobile
+     hamburger menu uses a separate panel, so these rules apply
+     only when the dropdown itself is visible on a narrow window.) */
+  .mega-menu-context__copy {
+    max-width: none;
+  }
+}
+
 /* Mobile menu section group — used to label the four methodology
    destinations under a single "Methodology" eyebrow heading inside
    the hamburger panel. Keeps the panel flat (no nested collapse) so
