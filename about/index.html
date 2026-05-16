@@ -17,11 +17,11 @@
 <meta property="og:site_name" content="Foundation AI Advisory" />
 <meta name="twitter:card" content="summary_large_image" />
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Foundation AI Advisory","legalName":"Foundation AI Advisory, LLC","url":"https://foundationaiadvisory.com/","logo":"https://foundationaiadvisory.com/assets/global-header-logo-wordmark.png","description":"A business-first AI advisory firm for mid-market operators. Foundation AI Advisory fixes the data, workflow, and system foundation before applying AI.","founder":{"@type":"Person","name":"Ben DeMichael"},"foundingLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressRegion":"OH","addressCountry":"US"}},"knowsAbout":["Data Curation and Governance","Workflow Optimization","AI Design and Implementation","Mid-Market AI Strategy","Applied AI for Industrial Operations"],"sameAs":["https://www.linkedin.com/company/foundation-ai-advisory"],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"privacy@foundationaiadvisory.com","url":"https://foundationaiadvisory.com/contact/","availableLanguage":["English"]}}</script>
-<link rel="stylesheet" href="/tailwind-static.css?v=20260517m" />
+<link rel="stylesheet" href="/tailwind-static.css?v=20260517n" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=20260517m" />
+<link rel="stylesheet" href="/styles.css?v=20260517n" />
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://foundationaiadvisory.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://foundationaiadvisory.com/about/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"About Foundation AI Advisory","url":"https://foundationaiadvisory.com/about/","description":"Foundation AI Advisory is a business-first AI advisory firm for mid-market operators. Built by operators, not tool vendors.","about":["Business-first AI advisory","Mid-market AI consulting","AI readiness","Data governance","Workflow optimization","Operator-led AI advisory"],"mainEntity":{"@type":"Organization","name":"Foundation AI Advisory","url":"https://foundationaiadvisory.com/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Foundation AI Advisory","url":"https://foundationaiadvisory.com/","serviceType":"AI Advisory","areaServed":"United States","audience":{"@type":"BusinessAudience","audienceType":"Mid-market operators"},"knowsAbout":["Data Curation and Governance","Workflow Optimization","AI Design and Implementation","Mid-Market AI Strategy","AI Readiness","Operator-Led AI Advisory","Platform-Agnostic AI Architecture"]}</script>
@@ -399,43 +399,65 @@
 <!-- ============================================================= -->
 <!-- METHODOLOGY                                                   -->
 <!-- ============================================================= -->
-<section class="bg-white" aria-labelledby="methodology-heading">
+<section class="about-methodology" aria-labelledby="methodology-heading">
   <div class="container-faa section-y">
-    <div class="max-w-3xl mb-12 lg:mb-14">
-      <div class="eyebrow" style="color: var(--faa-navy);">How We Work</div>
-      <h2 id="methodology-heading" class="h2 mt-3">Data First. Process Second. AI Last.</h2>
-      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
-        Our methodology is sequential by design. Each step earns the next.
-      </p>
+    <!-- Two-column header — eyebrow + headline on the left, explanatory
+         paragraph on the right. Balances the section so the headline
+         doesn't sit alone over a wide empty band. -->
+    <div class="about-methodology__header">
+      <div class="about-methodology__header-left">
+        <p class="eyebrow about-methodology__eyebrow">How We Work</p>
+        <h2 id="methodology-heading" class="about-methodology__title">Data First. Process Second. AI Last.</h2>
+      </div>
+      <div class="about-methodology__header-right">
+        <p class="about-methodology__lede">Foundation AI Advisory&rsquo;s methodology is sequential by design. We clarify the data foundation, optimize how work actually gets done, and only then design AI around clear ownership, controls, and measurable outcomes.</p>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <a href="/foundation/" class="card p-7" style="text-decoration:none; display:flex; flex-direction:column;">
-        <div class="method-num">01</div>
-        <h3 class="mt-5" style="color: var(--faa-navy); font-size: 22px; font-weight: 600; line-height: 1.25;">Data Curation &amp; Governance.</h3>
-        <p class="mt-4" style="color: var(--faa-gray-600); font-size: 16px; line-height: 1.65;">Clean, structured, governed, and accessible data. AI applied to contested or fragmented data scales the contradiction. Everything begins here.</p>
-        <span class="read-link mt-6" style="color: var(--faa-blue); font-weight: 600; margin-top:auto;">Explore Pillar 01&nbsp;<span class="arrow">&rarr;</span></span>
-      </a>
-      <a href="/operations/" class="card p-7" style="text-decoration:none; display:flex; flex-direction:column;">
-        <div class="method-num">02</div>
-        <h3 class="mt-5" style="color: var(--faa-navy); font-size: 22px; font-weight: 600; line-height: 1.25;">Workflow Optimization.</h3>
-        <p class="mt-4" style="color: var(--faa-gray-600); font-size: 16px; line-height: 1.65;">AI applied to broken workflows makes the workflow run faster, not better. We redesign how work actually gets done &mdash; not how it&rsquo;s documented &mdash; before automating any of it.</p>
-        <span class="read-link mt-6" style="color: var(--faa-blue); font-weight: 600; margin-top:auto;">Explore Pillar 02&nbsp;<span class="arrow">&rarr;</span></span>
-      </a>
-      <a href="/agentic-ai/" class="card p-7" style="text-decoration:none; display:flex; flex-direction:column;">
-        <div class="method-num">03</div>
-        <h3 class="mt-5" style="color: var(--faa-navy); font-size: 22px; font-weight: 600; line-height: 1.25;">AI Design &amp; Implementation.</h3>
-        <p class="mt-4" style="color: var(--faa-gray-600); font-size: 16px; line-height: 1.65;">Applied to optimized systems, with clear ownership, control surfaces, and a metric the business already tracks. No pilots without a path to production. No experiments without a defined outcome.</p>
-        <span class="read-link mt-6" style="color: var(--faa-blue); font-weight: 600; margin-top:auto;">Explore Pillar 03&nbsp;<span class="arrow">&rarr;</span></span>
-      </a>
-    </div>
+    <!-- Three-card sequence. On desktop the cards read as a connected
+         operating sequence (subtle connector lines between them via
+         the .about-methodology__grid::before pattern in CSS). On
+         mobile the connectors are suppressed and cards stack. -->
+    <ol class="about-methodology__grid">
+      <li>
+        <a href="/foundation/" class="about-methodology-card">
+          <span class="about-methodology-card__number">01</span>
+          <h3 class="about-methodology-card__title">Data Curation &amp; Governance</h3>
+          <p class="about-methodology-card__copy">Clean, structured, governed, and accessible data. AI applied to contested or fragmented data scales the contradiction. Everything begins here.</p>
+          <p class="about-methodology-card__outcome"><span class="about-methodology-card__outcome-label">Outcome</span><span class="about-methodology-card__outcome-text">Reliable data foundation</span></p>
+          <span class="about-methodology-card__link">Explore Pillar 01&nbsp;<span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </li>
+      <li>
+        <a href="/operations/" class="about-methodology-card">
+          <span class="about-methodology-card__number">02</span>
+          <h3 class="about-methodology-card__title">Workflow Optimization</h3>
+          <p class="about-methodology-card__copy">AI applied to broken workflows makes the workflow run faster, not better. We redesign how work actually gets done &mdash; not how it&rsquo;s documented &mdash; before automating any of it.</p>
+          <p class="about-methodology-card__outcome"><span class="about-methodology-card__outcome-label">Outcome</span><span class="about-methodology-card__outcome-text">Executable operating model</span></p>
+          <span class="about-methodology-card__link">Explore Pillar 02&nbsp;<span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </li>
+      <li>
+        <a href="/agentic-ai/" class="about-methodology-card">
+          <span class="about-methodology-card__number">03</span>
+          <h3 class="about-methodology-card__title">AI Design &amp; Implementation</h3>
+          <p class="about-methodology-card__copy">AI applied to optimized systems, with clear ownership, controls, and measurable outcomes. No pilots without a path to production. No experiments without a defined outcome.</p>
+          <p class="about-methodology-card__outcome"><span class="about-methodology-card__outcome-label">Outcome</span><span class="about-methodology-card__outcome-text">Controlled AI execution</span></p>
+          <span class="about-methodology-card__link">Explore Pillar 03&nbsp;<span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </li>
+    </ol>
 
-    <div class="mt-10 border-l-2 pl-6" style="border-color: var(--faa-blue); color: var(--faa-navy); font-size: clamp(22px, 2.4vw, 30px); font-weight: 600; line-height: 1.25; max-width: 760px;">
-      The order is the answer. Most AI failures we see started at step three.
-    </div>
-    <p class="mt-6" style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.6;">
-      <a href="/methodology/" style="color: var(--faa-blue); font-weight: 600;">Explore the full Foundation AI Advisory methodology&nbsp;&rarr;</a>
-    </p>
+    <!-- Methodology statement callout — replaces the previous narrow
+         pull-quote with a richer two-column block: pull quote +
+         supporting line on the left, CTA on the right. -->
+    <aside class="about-methodology-callout" aria-label="Foundation AI Advisory methodology statement">
+      <div class="about-methodology-callout__copy">
+        <p class="about-methodology-callout__quote">The order is the answer. Most AI failures we see started at step three.</p>
+        <p class="about-methodology-callout__support">Foundation AI Advisory starts with the business foundation first because AI only performs as well as the data, workflows, ownership, and controls underneath it.</p>
+      </div>
+      <a href="/methodology/" class="about-methodology-callout__cta">Explore the full Foundation AI Advisory methodology&nbsp;<span aria-hidden="true">&rarr;</span></a>
+    </aside>
   </div>
 </section>
 

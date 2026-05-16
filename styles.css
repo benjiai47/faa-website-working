@@ -2786,6 +2786,276 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   padding-top: 34px;
   border-top: 1px solid var(--faa-gray-100);
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   About page — "How We Work" methodology section.
+   Upgrades the previous three-card row into a sequenced operating
+   model: two-column header (headline left, explanatory paragraph
+   right), three connected sequence cards with outcome labels, and
+   a richer methodology-statement callout below.
+   Scoped under .about-methodology so the homepage and pillar pages
+   keep their existing card treatments.
+───────────────────────────────────────────────────────────────── */
+.about-methodology {
+  /* Soft blue-tinted band differentiates the section from the white
+     content around it without going dark — keeps the About page
+     light/executive overall. */
+  background:
+    radial-gradient(circle at 12% 10%, rgba(45, 104, 158, 0.06), transparent 30%),
+    linear-gradient(180deg, #f7fafd 0%, #eef4fa 100%);
+  border-top: 1px solid rgba(45, 104, 158, 0.10);
+  border-bottom: 1px solid rgba(45, 104, 158, 0.10);
+}
+
+/* Two-column header — left-aligned eyebrow + headline, right-aligned
+   explanatory paragraph. Stacks on narrow viewports. */
+.about-methodology__header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+@media (min-width: 900px) {
+  .about-methodology__header {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: clamp(40px, 6vw, 88px);
+    align-items: end;
+  }
+}
+.about-methodology__eyebrow {
+  margin: 0;
+  color: var(--faa-navy);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.about-methodology__title {
+  margin: 12px 0 0;
+  color: var(--faa-navy);
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.18;
+}
+.about-methodology__lede {
+  margin: 0;
+  color: var(--faa-gray-700);
+  font-size: 17px;
+  line-height: 1.62;
+  max-width: 56ch;
+}
+
+/* Sequence card grid. The <ol> resets the default numbering since
+   each card carries its own visible number badge. On desktop the
+   ::before pseudo on the grid draws a faint horizontal connector
+   line between the cards, reinforcing the "sequence" reading. */
+.about-methodology__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .about-methodology__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(20px, 2.4vw, 32px);
+  }
+  /* Faint connector line crossing the cards horizontally at the
+     number-badge height. Sits behind the cards via z-index: 0.
+     Hidden on smaller viewports where cards stack. */
+  .about-methodology__grid::before {
+    content: "";
+    position: absolute;
+    top: 64px;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(45, 104, 158, 0.30) 12%,
+      rgba(45, 104, 158, 0.30) 88%,
+      transparent 100%);
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+.about-methodology__grid > li {
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+.about-methodology-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 28px 26px 26px;
+  background: var(--faa-white);
+  border: 1px solid rgba(45, 104, 158, 0.18);
+  border-top: 3px solid var(--faa-blue);
+  border-radius: 6px;
+  box-shadow:
+    0 1px 0 rgba(15, 23, 42, 0.04),
+    0 8px 24px rgba(15, 35, 60, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.about-methodology-card:hover,
+.about-methodology-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(45, 104, 158, 0.40);
+  box-shadow:
+    0 14px 30px rgba(15, 35, 60, 0.10),
+    0 0 0 1px rgba(45, 104, 158, 0.16);
+}
+.about-methodology-card:focus-visible {
+  outline: 2px solid var(--faa-blue);
+  outline-offset: 4px;
+}
+.about-methodology-card__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(247, 251, 255, 1), rgba(232, 242, 251, 1));
+  border: 1px solid rgba(45, 104, 158, 0.22);
+  color: var(--faa-blue);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+}
+.about-methodology-card__title {
+  margin: 22px 0 0;
+  color: var(--faa-navy);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+}
+.about-methodology-card__copy {
+  margin: 12px 0 0;
+  color: var(--faa-gray-700);
+  font-size: 15px;
+  line-height: 1.62;
+}
+.about-methodology-card__outcome {
+  margin: 18px 0 0;
+  padding: 10px 12px;
+  background: rgba(45, 104, 158, 0.07);
+  border-left: 2px solid var(--faa-blue);
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.about-methodology-card__outcome-label {
+  color: var(--faa-blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.about-methodology-card__outcome-text {
+  color: var(--faa-navy);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.about-methodology-card__link {
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--faa-blue);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.about-methodology-card:hover .about-methodology-card__link,
+.about-methodology-card:focus-visible .about-methodology-card__link {
+  color: var(--faa-navy);
+}
+
+/* Bottom methodology-statement callout — sits below the cards.
+   Two-column on desktop (quote + supporting copy on the left, CTA
+   on the right), stacks on mobile. */
+.about-methodology-callout {
+  margin-top: clamp(36px, 5vw, 56px);
+  padding: clamp(24px, 3vw, 36px);
+  background: var(--faa-white);
+  border: 1px solid rgba(45, 104, 158, 0.16);
+  border-left: 4px solid var(--faa-blue);
+  border-radius: 6px;
+  box-shadow: 0 10px 28px rgba(15, 35, 60, 0.06);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 900px) {
+  .about-methodology-callout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: clamp(28px, 4vw, 56px);
+    align-items: center;
+  }
+}
+.about-methodology-callout__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.about-methodology-callout__quote {
+  margin: 0;
+  color: var(--faa-navy);
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.about-methodology-callout__support {
+  margin: 0;
+  color: var(--faa-gray-700);
+  font-size: 15px;
+  line-height: 1.62;
+  max-width: 60ch;
+}
+.about-methodology-callout__cta {
+  display: inline-flex;
+  align-items: center;
+  align-self: start;
+  padding: 12px 18px;
+  background: var(--faa-cta-bg);
+  color: var(--faa-cta-text);
+  border: 1px solid var(--faa-cta-border);
+  border-radius: var(--faa-cta-radius);
+  box-shadow: 0 10px 22px rgba(0, 35, 80, 0.18), 0 0 14px rgba(17, 164, 194, 0.14);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.about-methodology-callout__cta:hover {
+  background: var(--faa-cta-bg-hover);
+  border-color: var(--faa-cta-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 35, 80, 0.24), 0 0 18px rgba(17, 164, 194, 0.22);
+}
+.about-methodology-callout__cta:focus-visible {
+  outline: 3px solid var(--faa-cta-focus);
+  outline-offset: 4px;
+}
+@media (min-width: 900px) {
+  .about-methodology-callout__cta {
+    justify-self: end;
+  }
+}
 /* Optional supporting copy that sits above the CTA buttons. Used on
    long-form insights that frame the CTA with an executive lede
    before the action row. */
