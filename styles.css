@@ -3952,6 +3952,46 @@ a:focus-visible, button:focus-visible, input:focus-visible {
    surfaced inside the mobile hamburger panel (nav.js).
    Reads as a utility access link — not as marketing nav.
 ───────────────────────────────────────────────────────────────── */
+/* Mobile-only compact "Assessment" CTA in the site header. Sits
+   between the (hidden-on-mobile) Client Workspace link and the
+   (hidden-on-mobile) full "Business Systems Assessment" desktop
+   button, so on small screens it's the only conversion button
+   visible alongside the hamburger toggle. Hides at >=640px where
+   the full desktop BSA button takes over.
+
+   Links to the same mailto destination as the desktop BSA button
+   so the mobile and desktop CTAs behave identically. */
+.mobile-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  padding: 8px 12px;
+  background: var(--faa-blue);
+  color: var(--faa-white);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 4px;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 180ms ease-out;
+}
+.mobile-header-cta:hover,
+.mobile-header-cta:focus-visible {
+  background: var(--faa-navy);
+  color: var(--faa-white);
+}
+.mobile-header-cta:focus-visible {
+  outline: 2px solid var(--faa-blue);
+  outline-offset: 2px;
+}
+@media (min-width: 640px) {
+  .mobile-header-cta {
+    display: none;
+  }
+}
+
 .utility-access-link {
   display: none;
   align-items: center;

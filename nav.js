@@ -4,7 +4,14 @@
   const header = document.getElementById('site-header');
   if (!header) return;
 
-  const ctaWrap = header.querySelector('.container-faa > .flex.items-center.shrink-0');
+  // Target the RIGHT-side container specifically (a <div>), not the
+  // logo's <a> wrapper which shares the same class. Without the tag
+  // restriction, querySelector returns the first match — the logo
+  // anchor — and the hamburger ends up wrongly nested inside the
+  // logo link. The tag-prefixed selector locks onto the right-side
+  // div that holds the Client Workspace link, the mobile CTA, and
+  // the desktop Business Systems Assessment button.
+  const ctaWrap = header.querySelector('.container-faa > div.flex.items-center.shrink-0');
   if (ctaWrap && !header.querySelector('[data-mobile-menu-toggle]')) {
     const toggle = document.createElement('button');
     toggle.type = 'button';
