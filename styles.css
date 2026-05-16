@@ -610,20 +610,31 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   margin: 0;
   padding: 0;
   display: flex;
+  /* All six chips fit on a single row at desktop widths. Falls back
+     to wrap on narrower viewports where the left column is too tight. */
   flex-wrap: wrap;
-  gap: 8px 10px;
+  gap: 6px 7px;
 }
 .home-methodology-outcomes__chips li {
   display: inline-flex;
   align-items: center;
-  padding: 7px 12px;
-  font-size: 13px;
+  padding: 5px 11px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--faa-navy);
   background: linear-gradient(180deg, rgba(247, 251, 255, 1) 0%, rgba(234, 243, 250, 0.95) 100%);
   border: 1px solid rgba(45, 104, 158, 0.18);
   border-radius: 999px;
   letter-spacing: 0.005em;
+  white-space: nowrap;
+}
+@media (min-width: 1024px) {
+  /* Force the six outcome chips onto a single row at desktop widths.
+     The left column at this size has ~570px+ of content width which
+     comfortably holds all six chips at the compact sizing above. */
+  .home-methodology-outcomes__chips {
+    flex-wrap: nowrap;
+  }
 }
 
 /* Right-side methodology sequence panel — dark navy card with the
